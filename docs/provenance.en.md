@@ -1,16 +1,11 @@
-# Sources and licensing
+# Sources and scope
 
 [简体中文](provenance.md) · [Home](../README.en.md)
 
-The first version draws on [Qoder-Optimization v0.2.2](https://github.com/liushikuan63/Qoder-Optimization/tree/fe929cf1de22d4312b9526536568161d2a674439). The root [MIT license](../LICENSE) retains the upstream notice. The pack adapts the workflows to Codex and provides its own installer and screenshot crop tool.
+This edition compares three sources: the maintainers’ portable Codex skills, the general working agreement and the [reviewed Qoder revision](https://github.com/liushikuan63/Qoder-Optimization/tree/fe929cf1de22d4312b9526536568161d2a674439). The [inventory](../inventory.json) maps each reviewed source skill to an installed workflow or gives a specific reason for keeping it upstream. To find what you can actually use, start with the [skill directory](skills.en.md) or the [project rule template](../rules/AGENTS.en.example.md).
 
-| Upstream material | What this pack takes from it |
-| --- | --- |
-| Browser checks and SPA diagnosis | Open the affected route, check more than one viewport height, and verify that scripts and startup requests return usable content. |
-| Screenshot inspection | Crop by original image coordinates and zoom without interpolating pixels. |
-| Plan review and delivery checks | Look for defects a test could miss and match each important requirement to evidence. |
-| Intermittent failures and bulk editing | Keep the first failure, check the actual runner, and check anchors before editing. |
-| VibeCoding and skill authoring | Follow the project's existing task structure, check links, and confirm Codex can find new skills. |
-| MCP and project rules | Use explicit, optional connections and provide a project instruction template. |
+The pack groups related practices by task. For example, the message-delivery workflow asks you to redeliver after commit but before acknowledgement and check for a single business effect. It does not install Kafka, RabbitMQ or an upstream client. The browser workflow checks the response type of a startup script so that a successful HTML fallback does not count as JavaScript loading correctly.
 
-The pack does not include Qoder hooks, approval settings, publishing automation, or personal state. The MCP connections are operated by their providers. The templates use public URLs and contain no credentials.
+In the inventory, `adapted` means selected portable methods, not a complete copy of the upstream skill, assets or scripts. `upstream-only` means the named tool or procedure is not shipped; both languages give the reason. The rule mapping records reusable principles rather than another host’s absolute paths, account settings, permissions or hooks. The two optional [MCP examples](../mcp/README.en.md) are independent of skill installation.
+
+The project and reviewed Qoder revision use the [MIT License](../LICENSE). The Codex workflows are written for this pack. The upstream local engineering skills also credit ECC and Compound Engineering; their notices are retained in [ECC](../notices/LICENSE-ECC.txt) and [Compound Engineering](../notices/LICENSE-CE.txt). The pack does not redistribute third-party design libraries or the upstream tool collection.

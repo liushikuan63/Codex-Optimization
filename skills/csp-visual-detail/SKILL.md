@@ -16,3 +16,9 @@ python <本技能目录>/scripts/crop_detail.py <原图> <新输出.png> --box 1
 看全图定位，再看裁切。比对两张截图时对齐状态、视口、字体、DPR 和对应元素；若元素有位移，分别确定框并记录。整数倍最近邻只负责展示源像素；保留缩放细节和原图，必要时给出数值或真实交互作交叉证据。读不清时报告具体不确定处，取更清晰的原始截图；不要把插值或 OCR 当原图证据。
 
 来源：MIT 仓库 [image-detail-inspect](https://github.com/liushikuan63/Qoder-Optimization/tree/fe929cf1de22d4312b9526536568161d2a674439/skills/image-detail-inspect)。只提炼本地裁切和像素证据，工具按本机环境独立实现。
+
+按场景查找：[任务示例 / Worked examples](references/applied-methods.md)。
+
+## English
+
+Keep the original image and its pixel coordinates. For tiny text, single-pixel edges and transparency, use a lossless crop and integer nearest-neighbor zoom. Compare the same region and scale. The included crop script needs Pillow; the right and bottom bounds are exclusive. Report only what the image shows.

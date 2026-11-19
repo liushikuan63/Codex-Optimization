@@ -10,3 +10,9 @@ description: 验收改动页面的真实交互、宽高布局和 SPA 启动，�
 - 布局和共用组件按 [受影响入口与宽高验收](references/affected-routes-and-viewports.md) 选择入口、状态和宽高；细边、小字号或细微差异可调用 `csp-visual-detail`。动画/SVG/主题按 [动效与主题](references/motion-and-theme.md) 验收。
 - 白屏、持续转圈或刷新后卡住时按 [SPA 启动排查](references/spa-startup-triage.md) 检查文档版本、模块响应、初始化 API 和加载状态。
 - 报告通过、失败、未验证及原因；替身数据不证明真实账号、外部交付或原生端通过。
+
+按场景查找：[任务示例 / Worked examples](references/applied-methods.md)。
+
+## English
+
+Exercise the actual route and a user action. Check the build, console, network, affected viewport sizes and failure states. For a spinner, inspect the document version, module response bodies and startup requests. Preserve the first failure and distinguish fixture results from real-account acceptance.

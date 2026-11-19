@@ -39,7 +39,8 @@ class PackTest(unittest.TestCase):
         self.assertFalse(self.target.exists())
         self.command("install")
         receipt = self.target / ".codex-optimization-install.json"
-        self.assertEqual(len(json.loads(receipt.read_text("utf8"))["files"]), 7)
+        expected = {entry.parent.name for entry in SKILLS.glob("*/SKILL.md")}
+        self.assertEqual(set(json.loads(receipt.read_text("utf8"))["files"]), expected)
         actual = snapshot(self.target)
         self.assertEqual({k: v for k, v in actual.items() if k != Path(receipt.name)}, snapshot(SKILLS))
         self.command("install", 1)
@@ -70,7 +71,8 @@ class PackTest(unittest.TestCase):
     def test_pack_links_and_entry_names(self):
         auditor = SKILLS / "csp-skill-adoption/scripts/audit_references.py"
         skills = sorted(SKILLS.iterdir())
-        self.assertEqual(len(skills), 7)
+        declared = set(json.loads((BASE / "inventory.json").read_text("utf8"))["skills"])
+        self.assertEqual({folder.name for folder in skills}, declared)
         for folder in skills:
             body = (folder / "SKILL.md").read_text("utf8").splitlines()
             self.assertEqual(body[:2], ["---", f"name: {folder.name}"])

@@ -11,3 +11,9 @@ description: 对开发方案、迁移计划、规格或验收条款做反例评�
 4. 先列会改变执行或放行决定的问题，给具体反例、影响和收敛条件。必要信息查不到时保留未验证项，写出需要的数据或决策；用户只要求评审时仅审阅。没有高影响反例时结束，不设固定轮数或新审批。
 
 来源：MIT 仓库 [反例方案复核](https://github.com/liushikuan63/Qoder-Optimization/blob/fe929cf1de22d4312b9526536568161d2a674439/skills/counterexample-driven-plan-review/SKILL.md)、[VibeCoding 文档](https://github.com/liushikuan63/Qoder-Optimization/blob/fe929cf1de22d4312b9526536568161d2a674439/skills/vibecoding-doc/SKILL.md)。按 Codex 现有授权和项目约定另写。
+
+按场景查找：[任务示例 / Worked examples](references/applied-methods.md)。
+
+## English
+
+Construct a realistic case where the planned tests pass while the requirement fails. Ground it in actual callers, data owners and failure windows. Add the smallest observable check that catches it. Identify remaining assumptions and a recovery path. Return specific changes to the plan.

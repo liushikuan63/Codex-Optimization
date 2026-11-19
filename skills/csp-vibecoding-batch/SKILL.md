@@ -16,3 +16,9 @@ metadata:
 6. 交付卡片、影响的索引、实际检查结果和剩余边界。立卡请求以任务文档交付为止；同一请求已明确授权实现或提交时按项目流程继续。需要提交时只暂存本轮拥有的路径。
 
 来源：Qoder-Optimization [vibecoding-batch-append](https://github.com/liushikuan63/Qoder-Optimization/tree/fe929cf1de22d4312b9526536568161d2a674439/skills/vibecoding-batch-append)，MIT。
+
+按场景查找：[任务示例 / Worked examples](references/applied-methods.md)。
+
+## English
+
+For an existing task package, read its template, index, dependency list and validation command. Check that cited source lines still mean what the plan says. Update the batch and related indexes, run the project's validator and record its observed result and next executable step.

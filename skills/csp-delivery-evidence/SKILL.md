@@ -10,3 +10,9 @@ description: 将需求和最终证据逐项对齐，补齐交付文档、发布�
 - 同步受影响的设计注释、现有 Wiki 和运维说明，写清失败恢复、兼容边界和关键不变量。
 - 涉及安装、升级或生成可读目录、索引等派生文件时，按 [派生元数据事务验收](references/derived-metadata-transactions.md) 检查写入和失败路径。
 - 实体发布包记录制品哈希、源码、系统架构、安装命令和退出结果。在兼容环境安装并运行关键流程；隔离夹具、脚本自测和独立实装各自报告。
+
+按场景查找：[任务示例 / Worked examples](references/applied-methods.md)。
+
+## English
+
+Map requirements to evidence from the final revision. Cover old entry points, recovery and a negative control. Check derived indexes and receipts after interrupted writes. Install the actual release independently, record its hash and run a critical flow. Report compilation, fixture tests, installation and real use separately.

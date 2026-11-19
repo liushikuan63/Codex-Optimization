@@ -1,0 +1,1355 @@
+{
+  "schema": 2,
+  "personal_rule_sections": {
+    "全局工作约定": [
+      "R01",
+      "R02"
+    ],
+    "沟通与推进": [
+      "R01",
+      "R03",
+      "R04",
+      "R17"
+    ],
+    "实现与验证": [
+      "R06",
+      "R09",
+      "R10",
+      "R11",
+      "R12",
+      "R19"
+    ],
+    "工具、检索与上下文": [
+      "R05",
+      "R08",
+      "R16",
+      "R21"
+    ],
+    "Windows 与变更边界": [
+      "R04",
+      "R07",
+      "R15"
+    ],
+    "本机项目工作方式": [
+      "R06",
+      "R07",
+      "R11",
+      "R15",
+      "R16",
+      "R17",
+      "R20"
+    ],
+    "经验沉淀与自进化": [
+      "R04",
+      "R05",
+      "R21"
+    ],
+    "开发插件的按需使用": [
+      "R04",
+      "R08",
+      "R10",
+      "R11",
+      "R16",
+      "R21",
+      "R22"
+    ],
+    "所有电脑控制操作的工具顺序": [
+      "R04",
+      "R18"
+    ],
+    "长任务聊天轮转、原生接续与故障学习（用户全局授权）": [
+      "R04",
+      "R16",
+      "R17",
+      "R18",
+      "R21"
+    ],
+    "开发文档与实体包验收": [
+      "R11",
+      "R19",
+      "R20"
+    ]
+  },
+  "upstream_skill_trees": {
+    "agent-client-network-triage": "98f26309b5e537693d8a8a904b6c95ab022dc237",
+    "architecture-designer": "2bdd7f155b8e4a68647b2cd2fae7b00ec80e2a3b",
+    "async-python-patterns": "993d10828bde72457893b68f6055274d5095558b",
+    "audit-ci-cost-levers": "273c06533761f07a6108bd24aa1b30377577bdcb",
+    "awesome-design-md": "87feff9182f8c913bb1651cd2335c1974f1eccb1",
+    "better-typography": "f1fed0e468e5d8608c0c44144b5018d92997d132",
+    "better-ui": "644eafec47bc44f0ebd78876217dcc57fff1e2ab",
+    "byok-model-retry": "052f5dad0e6acce712d532a36d4cfac50247584a",
+    "cloudbase-wechat-integration": "e5da242c8a1f605c0234d1577d9141bd330435aa",
+    "concurrent-edit-attribution-check": "e76ed3d97561ae51382c9b4210924182faaca10b",
+    "continuation-state-audit": "2ccc2f825d6d7bc1152e5a683a2d47b4fb39aa06",
+    "counterexample-driven-plan-review": "140adda6e57dbfc15f3c691a608cff89faef9f86",
+    "deliver-prd": "6d76684cd5d63fee0ed66db4942dbed73c3974dd",
+    "design-engineering-catalogue": "98f73f15764ccc272287ed520f3211aaa6312131",
+    "design-taste-frontend": "681c7635541db903a47ce1d81be8909962ef31ac",
+    "desktop-update-push-triage": "45cd60bee29a1d766995823b42e3728baf7ce6f6",
+    "diagnose-github-actions-quota": "914c4081d7030786ebf4af5dc7bc0a593c18d296",
+    "diagnose-windows-webview2-blank-window": "f81b12464e4b246bba0ed924d3c96bc3f7a6459c",
+    "disk-junction-migration": "cadc2aea3cb11b94587d05551cd9eaf0edf574e7",
+    "distinctive-design-systems": "adc79a3e851a61a0aeb8e0ed79e04815be3d9945",
+    "dsh-session-format-debug": "cf68f9debe74cd9667ef4e2a1562aa59d2ae3d2b",
+    "electron-app-stuck-spinner-triage": "1149462f3c83d0e5163acf1037a70107862e8db6",
+    "electron-asar-code-forensics": "ed13916ce3c8dd22d3bb77f557820f6f46a23413",
+    "electron-tray-icon-diagnosis": "d2e53a27d94536e0d115b433335e7fc095a70d67",
+    "encrypted-office-visual-inspection": "77eb90fc031424a1393a85beb4bf35fa30ac9c55",
+    "frontend-design-ui-ux": "0aeb027be3e6d3aed3af7e815c727e0547658fec",
+    "frontend-development": "2f27b7f76fe5e223a0911516eea1186e044d8d6d",
+    "game-designer-toolkit": "1de58042dc176300542686ae307bbf1743df4e84",
+    "game-numeric-design": "ba37726aace67f3b2339e6b771553d59df017f4e",
+    "github-accelerator": "4466d9af23dd5857f1805e05dbcf1e8d5adfcf85",
+    "global-config-smoke-runner": "f43619ee86f48da29338543c0f2dcce97f1d6a5f",
+    "goal-driven-execution": "3618bebddaf75e8192d5df8d43cf83acdde5f456",
+    "hid-device-protocol-probe": "fc361d39ed7f7425dc96b78deb966a6ccb7838ff",
+    "i-have-adhd": "ea369a9ce8887bb42ad416c2a928b95450f5ab21",
+    "image-detail-inspect": "4eab54d7ed2fdaa8206a9afe76c8e5da337dae3d",
+    "impeccable": "b54d27b4176561b29e1cbf9f73607c52fe98ef61",
+    "injected-context-slimming": "f59e8f88239d5f5c7e88dfab52cb569aad2e6df0",
+    "intermittent-test-red-triage": "1e974762c6386aa510ffaad83d40eb86a14f019d",
+    "java-architect": "ceddebeaaa603fd8b638919a80410fd3c62e838f",
+    "java-quality": "a35398269344193d25da6ac7b6bc67d740a4797d",
+    "kafka-best-practices": "7347ee608fbd47a8732b8668a9581c286d637955",
+    "large-sqlite-text-extraction": "5d724889ab3d661d5bd10d2ee23d651ea64c211a",
+    "local-api-contracts": "94be3d9badc5de48ee6d6b5ab2f14b3b8a5cc36f",
+    "local-browser-e2e": "eed05ebe92a3cffb6300be0f46ef5ecfb3bf7b20",
+    "local-db-migrations": "7910c69cf0a23adf235aeda042c28913d14c6295",
+    "local-frontend-a11y": "0a9d4ff22391d600e231339423eab1f6b91b22c9",
+    "local-performance-evidence": "c6543baff0755a4f93198d7bf56ba37cd5c75be5",
+    "local-reverse-proxy-triage": "f21b6bbf84399dededa1f75c30798dbe4ea4e1f0",
+    "local-rust-engineering": "30bc568357296607092f395384a763ccf7e094ac",
+    "local-spring-mybatis": "42150aee6f14f8c9196b5333e6825e0005542df0",
+    "long-task-merge-takeover": "014da523c06d5778395e5b338c37f28018c4b1df",
+    "mechanize-rule-into-hook-guard": "fae7b0ca0059b7619932a4312da31eb780f84d67",
+    "memory-bank-divergence-repair": "a3ef3dcc3015c97b7fe64557803be74d77a65151",
+    "memory-entry-update": "8bf0dcb3836ef5475b85f9a3382f7290d3f7dcfd",
+    "merge-inbound-qoder-package": "8ff46eda181176c57a140ed0273d19e47e952a2a",
+    "minigame-dev-pro": "983e1bcdd089bece903a70cb9e32ef73b7fb8879",
+    "miniprogram-development": "a88aee16818b48a0312611cc32d3d68422ad3dff",
+    "mongodb-atlas-stream-processing": "968d150dcad97738eddb27ca3fe876ed92106594",
+    "mongodb-connection": "7e79a2b16def940755f6fcb66017c97d1ef77b2e",
+    "mongodb-mcp-setup": "0c4d60df618630991ed3c53d8f35358f60becad8",
+    "mongodb-natural-language-querying": "2fe917206a2585e7275c610d01a16f45449057de",
+    "mongodb-query-optimizer": "af096f7b415efe63ab4b178f4c77e23cb3f16732",
+    "mongodb-schema-design": "3d63fc5d320114e879fb8a2348df08bf536ecdc4",
+    "mongodb-search-and-ai": "e88e35477084d1238d30975693b52bc5b4a94faa",
+    "mysql": "a2d3f6d189cb2847d659da7108b399df9ac08875",
+    "nextjs-app-router-patterns": "a564abf14fd99e0d49a062c71e1b0b3aca23bb0c",
+    "nginx-config-builder": "a0afdf29b8c2fc7a0e552fd89cd251346c60cac4",
+    "nodejs-backend-patterns": "36eb9d59e36c73c948146941226b1958138470fb",
+    "oauth-login-failure-triage": "672f262963a33101a50b0170d4ff50c780d63e7b",
+    "office-docs": "ff9bef7a883d212b5199d5f423b6f2d36b3a968c",
+    "open-code-review-delegate": "1c44af886a89a37e6fb7d52d828452b8be9f9662",
+    "oracledb": "b7c1a4d12f1ba3c242f995e5d51350309668cf50",
+    "parallel-orchestration": "5af34d7078e3a4aba20a14a1e99da5d61b5fdbc6",
+    "pause-writer-before-shared-file-edit": "b9e7584efcf3aa38bf035ab0fddc8cddf2f22d2a",
+    "postgresql-optimization": "cde92d7907fcdb7f2ccf7c07b7694cf33ed023b6",
+    "postgresql-table-design": "f0cb6ac9caf3ed80b6a4d1b7dfdb739ad21476b2",
+    "powershell-windows-display-interop": "07978cfc9bfc364c241f868e16ec7d03cea51070",
+    "production-readiness-audit": "7629898e52fcba8e1a3a452175363434e306c486",
+    "proxy-rule-surgery": "88aba12ed754c232ec6b1dc8fe53acabaf597e30",
+    "python-anti-patterns": "7ac5604951de6d41660abb7f25db733a3e6bf5e1",
+    "python-backend-guidelines": "10d3d4c751639b7a5bf7143a9437ad105f4a5fa2",
+    "python-dataviz": "0436fe879288b9bae2c6b05f721e3d25764cd37a",
+    "python-error-handling": "480ff9e8e8f8ec7b839b8303e1372e2fec6a78eb",
+    "python-performance-optimization": "08c2e271829ec9131a5a0b5d484d1a6a332c8a30",
+    "python-programmer": "0920577e5cb9e534129f2fb2cb5bb273e28cc895",
+    "python-project-structure": "70109b96fb8e73142730844acd8e6ffe125a2139",
+    "python-testing-patterns": "639d303a1187fe64e2538522ea25c5b8d3321763",
+    "python-type-safety": "bf3b765e5f348c6a0bcf786241a348f680b56d75",
+    "rabbitmq-expert": "2e8cace923f72e0ee95cb5d1f47708eb7ef442d3",
+    "react-modernization": "369e4126c118a3d6179e0ec42dc38c1dbf51c91f",
+    "redis-clustering": "d0ae426252bead1d470094f6045384e464524eec",
+    "redis-connections": "1891f96798bd9271f491450cd12d6ee8ce12d3bf",
+    "redis-core": "e3e306b3035b3b83a608ba5f595ccbd86f180dbf",
+    "redis-observability": "0c55d64f5ff5d9f078398f89e1ab00d15fa96f7e",
+    "redis-search": "b18dfa90c7c9fcb8c3124f8a042a98dd1b822f7e",
+    "redis-security": "3eee73563cdd01897abad3c90293e4d27a030dd8",
+    "redis-semantic-cache": "1b805f46fd12ddfb6975bb9c2c3209e85dfdf618",
+    "responsive-craft": "ce4df687c3c7f36fb57681049b4c7f94015ce01b",
+    "rules-conflict-audit": "1f11cf874b12cc27c0525971a8a3f6380a943730",
+    "safe-text-editing": "f25590391f04f50c78bd276fc4726ef691b6e9a0",
+    "self-evolution": "33aa6eef31e8c80cdb7cb24b883092c4da88e8a8",
+    "senior-devops": "02772a63f822437d154343409ff64e1b3627fe7d",
+    "setup-windows-selfhosted-runner": "0e862be068eff7049ba8774af37dd31cd5c23075",
+    "share-package-release": "d32c6d0dd222755c6f23532020d5e632f60e4b50",
+    "ship-clean-pr": "8620ef7c3f82ca775af64c38b00388b19eca4ce7",
+    "shipped-app-js-patch-hygiene": "bf4fe63a40cc91e33f4621d16ef3c267ade8827b",
+    "skill-authoring-closure": "c83545c2a771e0304327dcda50d34200fd948feb",
+    "skill-description-route-cue-rewrite": "3a6c20338d577bd6fb697e462e4b7267d2b7cd3d",
+    "skill-reference-integrity-audit": "615a9c826c5222e0dd44f6fdb3b7ddc5bcbd2254",
+    "skill-tiering-lazy-load": "945e5f16ce3e8e09732186b9cff0facc5417c73a",
+    "skill-trim-with-capability-transfer": "20122ac4d4c544f07859632902b7d8ad97669154",
+    "skills-router": "179c056b5c8da280bc9403b16b6592859bcae7f4",
+    "spa-loading-hang-triage": "04f813f5ff2f1533e56c5b801d57951efb5473a5",
+    "spring-aop": "6dbe5e182eab95f997cd448b7a14d36aa2c24a04",
+    "spring-boot-actuator": "c507f9240fb1b1be6a7d44d751362425919aed1c",
+    "spring-boot-cache": "51e8330f33511af63d96d48c4122f3e1d1d1492b",
+    "spring-boot-event-driven-patterns": "b31c1ae3981faad5bf2f9cfbd77f6796c676b8cf",
+    "spring-boot-resilience4j": "f62b865a8f042fbce9992f2f8e6242f08545f969",
+    "spring-boot-rest-api-standards": "5661a994263201cd69e5e70e262855b98697237e",
+    "spring-boot-test-patterns": "db854fd410e0ede3430b01caa509d5f59f358ccf",
+    "spring-events": "aaf7b10c0efd4dd6286aab29de875f3df6718aaa",
+    "springboot-patterns": "266d474e9b831e5b544e701452267be2075ae9c0",
+    "springboot-verification": "e5ccfdc5601a3b0a183e2e4597e5eecc5a69891e",
+    "structured-edit-safety": "fa073d80aa412da261ade55074b29e07feb537e1",
+    "svg-scene-animation": "1f7ac5612432f5130d41b2438a7e2ad2a23b5836",
+    "systemd-java-service-centos7": "06a297317747647812a67e39c8ec54462f63272d",
+    "tailwindcss-animations": "3d0e85b8b4950fd189bd7e8fdeb591f98422bd53",
+    "typescript-pro": "5685ff609f61f8fcdd250a5d63b932075a72b203",
+    "umi3-to-umi4-upgrade": "5dca92091f6747c086511235632467fc8e10a2d5",
+    "user-side-deploy-verify": "d865c7e514528f50cfdf068859fb895f25c2e4ef",
+    "verify-before-claim": "a32c4676cc7fa18577b0f2a53cb3f6a9c5f6a979",
+    "verify-ui-in-browser": "6ca7d45d7f5ec926e4b110df3e9b4471ca8b08f8",
+    "verify-windows-cmd-tool": "08076b7e021bff7a03caeab5d4f2a976b88ad1bc",
+    "vibe-coding-workflow": "cfe4b118dcf316be1269b23ab96e9ef607e6a922",
+    "vibecoding-batch-append": "7ef85e4cdedca6cf5d62c303551224b25730695d",
+    "vibecoding-doc": "e3f5d7ce14fb46a60bbe98545386c6c6ef2d3ef4",
+    "vue-expert": "0036ba0ff4ed8742075628d0cec5a36a229f994c",
+    "wechat-miniprogram-dev": "60ec3cbdc6369bdfc275bdda1bc98f6267d4c08c",
+    "windows-desktop-keyboard-automation": "d5124fce594574a9532b1a418b4984f25394c69a",
+    "windows-elevated-changes-from-git-bash": "c3e4bc0bf49eecef6245451a1724621ea4d5a267",
+    "windows-gitbash-command-safety": "7c43286fe2085472648ec1a477dab3d35acf680b",
+    "windows-powershell-from-gitbash": "080bd443c205104a003c381ffa54fcb95b4bc479",
+    "windows-relocated-install-path-repair": "21d64e96daaef04f973499990074721ce160849a",
+    "windows-ui-forensics-powershell": "8c3a562f491cd9ea1007854d23053d2d7b689f3b",
+    "write-repowiki": "f5405275b816d63b12ab0b878ee14d8b22243fca"
+  },
+  "upstream": {
+    "repository": "https://github.com/liushikuan63/Qoder-Optimization",
+    "revision": "fe929cf1de22d4312b9526536568161d2a674439",
+    "rules_file": "Qoder-AI编码通用规则.md"
+  },
+  "skills": {
+    "csp-api-contracts": {
+      "zh": "接口契约",
+      "en": "API contracts"
+    },
+    "csp-backend-services": {
+      "zh": "后端服务边界",
+      "en": "Backend service boundaries"
+    },
+    "csp-browser-acceptance": {
+      "zh": "浏览器验收",
+      "en": "Browser acceptance"
+    },
+    "csp-ci-evidence": {
+      "zh": "CI 失败与成本",
+      "en": "CI failures and cost"
+    },
+    "csp-db-migrations": {
+      "zh": "数据库迁移",
+      "en": "Database migrations"
+    },
+    "csp-delivery-evidence": {
+      "zh": "从需求到交付证据",
+      "en": "Delivery evidence"
+    },
+    "csp-desktop-verification": {
+      "zh": "桌面操作与结果核验",
+      "en": "Desktop interaction and readback"
+    },
+    "csp-document-artifacts": {
+      "zh": "文档、表格与图表验收",
+      "en": "Documents, sheets and charts"
+    },
+    "csp-document-cache-stores": {
+      "zh": "文档库和缓存",
+      "en": "Document stores and caches"
+    },
+    "csp-event-delivery": {
+      "zh": "消息投递与重试",
+      "en": "Message delivery and retries"
+    },
+    "csp-focused-collaboration": {
+      "zh": "专注协作",
+      "en": "Focused collaboration"
+    },
+    "csp-frontend-a11y": {
+      "zh": "键盘与无障碍",
+      "en": "Keyboard and accessibility"
+    },
+    "csp-frontend-frameworks": {
+      "zh": "前端框架变更",
+      "en": "Frontend framework changes"
+    },
+    "csp-game-systems": {
+      "zh": "游戏机制与数值验证",
+      "en": "Game systems and balancing"
+    },
+    "csp-learning-review": {
+      "zh": "经验采纳与回退",
+      "en": "Review and roll back learned practices"
+    },
+    "csp-miniapp-runtime": {
+      "zh": "小程序与小游戏运行验证",
+      "en": "Mini app and game runtime"
+    },
+    "csp-parallel-write": {
+      "zh": "并行修改仓库",
+      "en": "Parallel changes to a repository"
+    },
+    "csp-performance-evidence": {
+      "zh": "性能与成本测量",
+      "en": "Performance and cost measurement"
+    },
+    "csp-plan-review": {
+      "zh": "用反例评审开发方案",
+      "en": "Plan review"
+    },
+    "csp-product-specs": {
+      "zh": "产品需求与架构决策",
+      "en": "Product requirements and architecture decisions"
+    },
+    "csp-python-engineering": {
+      "zh": "Python 工程与测试",
+      "en": "Python engineering and tests"
+    },
+    "csp-relational-queries": {
+      "zh": "关系数据库查询",
+      "en": "Relational queries"
+    },
+    "csp-runtime-rollout": {
+      "zh": "服务与客户端升级",
+      "en": "Service and client rollout"
+    },
+    "csp-rust-engineering": {
+      "zh": "Rust 错误与并发",
+      "en": "Rust errors and concurrency"
+    },
+    "csp-service-integration": {
+      "zh": "服务集成与故障定位",
+      "en": "Service integration and diagnosis"
+    },
+    "csp-skill-adoption": {
+      "zh": "维护技能集合",
+      "en": "Skill adoption"
+    },
+    "csp-spring-mybatis": {
+      "zh": "Spring 与 MyBatis",
+      "en": "Spring and MyBatis"
+    },
+    "csp-task-handoff": {
+      "zh": "长任务交接与恢复",
+      "en": "Task handoff and recovery"
+    },
+    "csp-ui-design-review": {
+      "zh": "界面设计与排版",
+      "en": "Interface design and typography"
+    },
+    "csp-vibecoding-batch": {
+      "zh": "维护既有 Vibecoding 任务包",
+      "en": "VibeCoding task batches"
+    },
+    "csp-visual-detail": {
+      "zh": "检查图像局部细节",
+      "en": "Image detail inspection"
+    },
+    "csp-windows-workflow": {
+      "zh": "Windows 项目验证",
+      "en": "Windows project checks"
+    }
+  },
+  "rule_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R22"
+  ],
+  "personal_skills": {
+    "github-ci-evidence": "csp-ci-evidence",
+    "local-api-contracts": "csp-api-contracts",
+    "local-browser-e2e": "csp-browser-acceptance",
+    "local-chat-continuation": "csp-task-handoff",
+    "local-db-migrations": "csp-db-migrations",
+    "local-development-delivery": "csp-delivery-evidence",
+    "local-frontend-a11y": "csp-frontend-a11y",
+    "local-native-computer-use": "csp-desktop-verification",
+    "local-parallel-write": "csp-parallel-write",
+    "local-performance-evidence": "csp-performance-evidence",
+    "local-plan-review": "csp-plan-review",
+    "local-rust-engineering": "csp-rust-engineering",
+    "local-skill-quality": "csp-skill-adoption",
+    "local-spring-mybatis": "csp-spring-mybatis",
+    "local-vibecoding-batch-append": "csp-vibecoding-batch",
+    "local-visual-detail": "csp-visual-detail",
+    "self-evolution": "csp-learning-review",
+    "windows-project-workflow": "csp-windows-workflow"
+  },
+  "upstream_skills": {
+    "agent-client-network-triage": {
+      "kind": "adapted",
+      "target": "csp-service-integration"
+    },
+    "architecture-designer": {
+      "kind": "adapted",
+      "target": "csp-product-specs"
+    },
+    "async-python-patterns": {
+      "kind": "adapted",
+      "target": "csp-python-engineering"
+    },
+    "audit-ci-cost-levers": {
+      "kind": "adapted",
+      "target": "csp-ci-evidence"
+    },
+    "awesome-design-md": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "better-typography": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "better-ui": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "byok-model-retry": {
+      "kind": "adapted",
+      "target": "csp-service-integration"
+    },
+    "cloudbase-wechat-integration": {
+      "kind": "adapted",
+      "target": "csp-miniapp-runtime"
+    },
+    "concurrent-edit-attribution-check": {
+      "kind": "adapted",
+      "target": "csp-parallel-write"
+    },
+    "continuation-state-audit": {
+      "kind": "adapted",
+      "target": "csp-task-handoff"
+    },
+    "counterexample-driven-plan-review": {
+      "kind": "adapted",
+      "target": "csp-plan-review"
+    },
+    "deliver-prd": {
+      "kind": "adapted",
+      "target": "csp-product-specs"
+    },
+    "design-engineering-catalogue": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "design-taste-frontend": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "desktop-update-push-triage": {
+      "kind": "adapted",
+      "target": "csp-runtime-rollout"
+    },
+    "diagnose-github-actions-quota": {
+      "kind": "adapted",
+      "target": "csp-ci-evidence"
+    },
+    "diagnose-windows-webview2-blank-window": {
+      "kind": "adapted",
+      "target": "csp-desktop-verification"
+    },
+    "disk-junction-migration": {
+      "kind": "adapted",
+      "target": "csp-windows-workflow"
+    },
+    "distinctive-design-systems": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "dsh-session-format-debug": {
+      "kind": "upstream-only",
+      "reason_zh": "DSH 的会话记录格式和恢复器随宿主变化。",
+      "reason_en": "The DSH session schema and recovery utility depend on that host."
+    },
+    "electron-app-stuck-spinner-triage": {
+      "kind": "adapted",
+      "target": "csp-browser-acceptance"
+    },
+    "electron-asar-code-forensics": {
+      "kind": "upstream-only",
+      "reason_zh": "针对已打包第三方客户端的分析依赖具体版本；本包提供自有工件核验。",
+      "reason_en": "Inspection of vendor-packaged internals depends on a specific build; this pack covers validation of owned artifacts."
+    },
+    "electron-tray-icon-diagnosis": {
+      "kind": "adapted",
+      "target": "csp-desktop-verification"
+    },
+    "encrypted-office-visual-inspection": {
+      "kind": "adapted",
+      "target": "csp-document-artifacts"
+    },
+    "frontend-design-ui-ux": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "frontend-development": {
+      "kind": "adapted",
+      "target": "csp-frontend-frameworks"
+    },
+    "game-designer-toolkit": {
+      "kind": "adapted",
+      "target": "csp-game-systems"
+    },
+    "game-numeric-design": {
+      "kind": "adapted",
+      "target": "csp-game-systems"
+    },
+    "github-accelerator": {
+      "kind": "upstream-only",
+      "reason_zh": "依赖特定网络服务和用户配置，不能作为通用默认设置分发。",
+      "reason_en": "This depends on a network service and individual routing settings."
+    },
+    "global-config-smoke-runner": {
+      "kind": "adapted",
+      "target": "csp-runtime-rollout"
+    },
+    "goal-driven-execution": {
+      "kind": "adapted",
+      "target": "csp-task-handoff"
+    },
+    "hid-device-protocol-probe": {
+      "kind": "upstream-only",
+      "reason_zh": "设备协议、硬件与厂商资料均为前置条件，不能用通用软件验收代替。",
+      "reason_en": "The procedure needs a specific device, its protocol and vendor documentation."
+    },
+    "i-have-adhd": {
+      "kind": "adapted",
+      "target": "csp-focused-collaboration"
+    },
+    "image-detail-inspect": {
+      "kind": "adapted",
+      "target": "csp-visual-detail"
+    },
+    "impeccable": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "injected-context-slimming": {
+      "kind": "adapted",
+      "target": "csp-task-handoff"
+    },
+    "intermittent-test-red-triage": {
+      "kind": "adapted",
+      "target": "csp-windows-workflow"
+    },
+    "java-architect": {
+      "kind": "adapted",
+      "target": "csp-backend-services"
+    },
+    "java-quality": {
+      "kind": "adapted",
+      "target": "csp-backend-services"
+    },
+    "kafka-best-practices": {
+      "kind": "adapted",
+      "target": "csp-event-delivery"
+    },
+    "large-sqlite-text-extraction": {
+      "kind": "adapted",
+      "target": "csp-relational-queries"
+    },
+    "local-api-contracts": {
+      "kind": "adapted",
+      "target": "csp-api-contracts"
+    },
+    "local-browser-e2e": {
+      "kind": "adapted",
+      "target": "csp-browser-acceptance"
+    },
+    "local-db-migrations": {
+      "kind": "adapted",
+      "target": "csp-db-migrations"
+    },
+    "local-frontend-a11y": {
+      "kind": "adapted",
+      "target": "csp-frontend-a11y"
+    },
+    "local-performance-evidence": {
+      "kind": "adapted",
+      "target": "csp-performance-evidence"
+    },
+    "local-reverse-proxy-triage": {
+      "kind": "adapted",
+      "target": "csp-service-integration"
+    },
+    "local-rust-engineering": {
+      "kind": "adapted",
+      "target": "csp-rust-engineering"
+    },
+    "local-spring-mybatis": {
+      "kind": "adapted",
+      "target": "csp-spring-mybatis"
+    },
+    "long-task-merge-takeover": {
+      "kind": "adapted",
+      "target": "csp-task-handoff"
+    },
+    "mechanize-rule-into-hook-guard": {
+      "kind": "adapted",
+      "target": "csp-skill-adoption"
+    },
+    "memory-bank-divergence-repair": {
+      "kind": "upstream-only",
+      "reason_zh": "该修复器依赖 Qoder 的记忆文件布局。通用交接和经验维护另有技能。",
+      "reason_en": "The repair tool assumes the Qoder memory layout; handoff and learning reviews have separate workflows."
+    },
+    "memory-entry-update": {
+      "kind": "adapted",
+      "target": "csp-learning-review"
+    },
+    "merge-inbound-qoder-package": {
+      "kind": "adapted",
+      "target": "csp-skill-adoption"
+    },
+    "minigame-dev-pro": {
+      "kind": "adapted",
+      "target": "csp-miniapp-runtime"
+    },
+    "miniprogram-development": {
+      "kind": "adapted",
+      "target": "csp-miniapp-runtime"
+    },
+    "mongodb-atlas-stream-processing": {
+      "kind": "adapted",
+      "target": "csp-event-delivery"
+    },
+    "mongodb-connection": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "mongodb-mcp-setup": {
+      "kind": "upstream-only",
+      "reason_zh": "此供应商连接需要自己的服务和授权；本包的 MCP 示例不配置数据库账号。",
+      "reason_en": "This vendor connection needs a separately provisioned service and authorized credentials; the examples do not configure database accounts."
+    },
+    "mongodb-natural-language-querying": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "mongodb-query-optimizer": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "mongodb-schema-design": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "mongodb-search-and-ai": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "mysql": {
+      "kind": "adapted",
+      "target": "csp-relational-queries"
+    },
+    "nextjs-app-router-patterns": {
+      "kind": "adapted",
+      "target": "csp-frontend-frameworks"
+    },
+    "nginx-config-builder": {
+      "kind": "adapted",
+      "target": "csp-runtime-rollout"
+    },
+    "nodejs-backend-patterns": {
+      "kind": "adapted",
+      "target": "csp-backend-services"
+    },
+    "oauth-login-failure-triage": {
+      "kind": "adapted",
+      "target": "csp-service-integration"
+    },
+    "office-docs": {
+      "kind": "adapted",
+      "target": "csp-document-artifacts"
+    },
+    "open-code-review-delegate": {
+      "kind": "adapted",
+      "target": "csp-parallel-write"
+    },
+    "oracledb": {
+      "kind": "adapted",
+      "target": "csp-relational-queries"
+    },
+    "parallel-orchestration": {
+      "kind": "adapted",
+      "target": "csp-parallel-write"
+    },
+    "pause-writer-before-shared-file-edit": {
+      "kind": "adapted",
+      "target": "csp-parallel-write"
+    },
+    "postgresql-optimization": {
+      "kind": "adapted",
+      "target": "csp-relational-queries"
+    },
+    "postgresql-table-design": {
+      "kind": "adapted",
+      "target": "csp-db-migrations"
+    },
+    "powershell-windows-display-interop": {
+      "kind": "adapted",
+      "target": "csp-desktop-verification"
+    },
+    "production-readiness-audit": {
+      "kind": "adapted",
+      "target": "csp-delivery-evidence"
+    },
+    "proxy-rule-surgery": {
+      "kind": "upstream-only",
+      "reason_zh": "依赖本机代理客户端和实际路由表，不能跨用户移植规则。",
+      "reason_en": "The changes depend on the installed proxy and its live route table."
+    },
+    "python-anti-patterns": {
+      "kind": "adapted",
+      "target": "csp-python-engineering"
+    },
+    "python-backend-guidelines": {
+      "kind": "adapted",
+      "target": "csp-python-engineering"
+    },
+    "python-dataviz": {
+      "kind": "adapted",
+      "target": "csp-document-artifacts"
+    },
+    "python-error-handling": {
+      "kind": "adapted",
+      "target": "csp-python-engineering"
+    },
+    "python-performance-optimization": {
+      "kind": "adapted",
+      "target": "csp-performance-evidence"
+    },
+    "python-programmer": {
+      "kind": "adapted",
+      "target": "csp-python-engineering"
+    },
+    "python-project-structure": {
+      "kind": "adapted",
+      "target": "csp-python-engineering"
+    },
+    "python-testing-patterns": {
+      "kind": "adapted",
+      "target": "csp-python-engineering"
+    },
+    "python-type-safety": {
+      "kind": "adapted",
+      "target": "csp-python-engineering"
+    },
+    "rabbitmq-expert": {
+      "kind": "adapted",
+      "target": "csp-event-delivery"
+    },
+    "react-modernization": {
+      "kind": "adapted",
+      "target": "csp-frontend-frameworks"
+    },
+    "redis-clustering": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "redis-connections": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "redis-core": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "redis-observability": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "redis-search": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "redis-security": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "redis-semantic-cache": {
+      "kind": "adapted",
+      "target": "csp-document-cache-stores"
+    },
+    "responsive-craft": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "rules-conflict-audit": {
+      "kind": "adapted",
+      "target": "csp-skill-adoption"
+    },
+    "safe-text-editing": {
+      "kind": "adapted",
+      "target": "csp-windows-workflow"
+    },
+    "self-evolution": {
+      "kind": "adapted",
+      "target": "csp-learning-review"
+    },
+    "senior-devops": {
+      "kind": "adapted",
+      "target": "csp-runtime-rollout"
+    },
+    "setup-windows-selfhosted-runner": {
+      "kind": "adapted",
+      "target": "csp-ci-evidence"
+    },
+    "share-package-release": {
+      "kind": "adapted",
+      "target": "csp-delivery-evidence"
+    },
+    "ship-clean-pr": {
+      "kind": "adapted",
+      "target": "csp-delivery-evidence"
+    },
+    "shipped-app-js-patch-hygiene": {
+      "kind": "upstream-only",
+      "reason_zh": "修改第三方已签名应用的内部代码不属于通用 Codex 发布包。",
+      "reason_en": "Modifying the internals of a signed third-party binary is outside this portable pack."
+    },
+    "skill-authoring-closure": {
+      "kind": "adapted",
+      "target": "csp-skill-adoption"
+    },
+    "skill-description-route-cue-rewrite": {
+      "kind": "adapted",
+      "target": "csp-skill-adoption"
+    },
+    "skill-reference-integrity-audit": {
+      "kind": "adapted",
+      "target": "csp-skill-adoption"
+    },
+    "skill-tiering-lazy-load": {
+      "kind": "adapted",
+      "target": "csp-skill-adoption"
+    },
+    "skill-trim-with-capability-transfer": {
+      "kind": "adapted",
+      "target": "csp-skill-adoption"
+    },
+    "skills-router": {
+      "kind": "adapted",
+      "target": "csp-skill-adoption"
+    },
+    "spa-loading-hang-triage": {
+      "kind": "adapted",
+      "target": "csp-browser-acceptance"
+    },
+    "spring-aop": {
+      "kind": "adapted",
+      "target": "csp-backend-services"
+    },
+    "spring-boot-actuator": {
+      "kind": "adapted",
+      "target": "csp-backend-services"
+    },
+    "spring-boot-cache": {
+      "kind": "adapted",
+      "target": "csp-backend-services"
+    },
+    "spring-boot-event-driven-patterns": {
+      "kind": "adapted",
+      "target": "csp-event-delivery"
+    },
+    "spring-boot-resilience4j": {
+      "kind": "adapted",
+      "target": "csp-backend-services"
+    },
+    "spring-boot-rest-api-standards": {
+      "kind": "adapted",
+      "target": "csp-api-contracts"
+    },
+    "spring-boot-test-patterns": {
+      "kind": "adapted",
+      "target": "csp-spring-mybatis"
+    },
+    "spring-events": {
+      "kind": "adapted",
+      "target": "csp-event-delivery"
+    },
+    "springboot-patterns": {
+      "kind": "adapted",
+      "target": "csp-spring-mybatis"
+    },
+    "springboot-verification": {
+      "kind": "adapted",
+      "target": "csp-spring-mybatis"
+    },
+    "structured-edit-safety": {
+      "kind": "adapted",
+      "target": "csp-windows-workflow"
+    },
+    "svg-scene-animation": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "systemd-java-service-centos7": {
+      "kind": "adapted",
+      "target": "csp-runtime-rollout"
+    },
+    "tailwindcss-animations": {
+      "kind": "adapted",
+      "target": "csp-ui-design-review"
+    },
+    "typescript-pro": {
+      "kind": "adapted",
+      "target": "csp-frontend-frameworks"
+    },
+    "umi3-to-umi4-upgrade": {
+      "kind": "adapted",
+      "target": "csp-frontend-frameworks"
+    },
+    "user-side-deploy-verify": {
+      "kind": "adapted",
+      "target": "csp-runtime-rollout"
+    },
+    "verify-before-claim": {
+      "kind": "adapted",
+      "target": "csp-delivery-evidence"
+    },
+    "verify-ui-in-browser": {
+      "kind": "adapted",
+      "target": "csp-browser-acceptance"
+    },
+    "verify-windows-cmd-tool": {
+      "kind": "adapted",
+      "target": "csp-windows-workflow"
+    },
+    "vibe-coding-workflow": {
+      "kind": "adapted",
+      "target": "csp-vibecoding-batch"
+    },
+    "vibecoding-batch-append": {
+      "kind": "adapted",
+      "target": "csp-vibecoding-batch"
+    },
+    "vibecoding-doc": {
+      "kind": "adapted",
+      "target": "csp-vibecoding-batch"
+    },
+    "vue-expert": {
+      "kind": "adapted",
+      "target": "csp-frontend-frameworks"
+    },
+    "wechat-miniprogram-dev": {
+      "kind": "adapted",
+      "target": "csp-miniapp-runtime"
+    },
+    "windows-desktop-keyboard-automation": {
+      "kind": "adapted",
+      "target": "csp-desktop-verification"
+    },
+    "windows-elevated-changes-from-git-bash": {
+      "kind": "adapted",
+      "target": "csp-windows-workflow"
+    },
+    "windows-gitbash-command-safety": {
+      "kind": "adapted",
+      "target": "csp-windows-workflow"
+    },
+    "windows-powershell-from-gitbash": {
+      "kind": "adapted",
+      "target": "csp-windows-workflow"
+    },
+    "windows-relocated-install-path-repair": {
+      "kind": "adapted",
+      "target": "csp-windows-workflow"
+    },
+    "windows-ui-forensics-powershell": {
+      "kind": "adapted",
+      "target": "csp-desktop-verification"
+    },
+    "write-repowiki": {
+      "kind": "adapted",
+      "target": "csp-product-specs"
+    }
+  },
+  "rule_sections": {
+    "Qoder-Optimization - 0.2.2": [
+      "R02",
+      "R22"
+    ],
+    "一、全局开发规则": [
+      "R01",
+      "R02"
+    ],
+    "冲突裁决优先级（规则之间打架时按此判定，不要每轮重新权衡）": [
+      "R02"
+    ],
+    "操作安全红线（绝对纪律）": [
+      "R04",
+      "R05",
+      "R15"
+    ],
+    "让规则真正生效（三层机制 + 精简）": [
+      "R02",
+      "R21",
+      "R22"
+    ],
+    "语言": [
+      "R03"
+    ],
+    "输出风格（直接简洁）": [
+      "R03"
+    ],
+    "验证（任何\"已完成/已修复/已验证\"之前）": [
+      "R11"
+    ],
+    "交付": [
+      "R20"
+    ],
+    "排查纪律": [
+      "R10"
+    ],
+    "工程纪律": [
+      "R06",
+      "R07",
+      "R09"
+    ],
+    "文档（任务接续的载体）": [
+      "R17",
+      "R19"
+    ],
+    "任务处理（规划与上下文纪律）": [
+      "R01",
+      "R17"
+    ],
+    "工具选用（先查已有，不凭记忆猜）": [
+      "R08"
+    ],
+    "记忆（按用途和授权保存）": [
+      "R21"
+    ],
+    "规则沉淀（随任务自动补充）": [
+      "R21"
+    ],
+    "工作方式": [
+      "R01",
+      "R03"
+    ],
+    "二、领域规则": [
+      "R07",
+      "R09"
+    ],
+    "Agent 工程借鉴（配置 AI 工作环境时读）": [
+      "R08",
+      "R21"
+    ],
+    "规则沉淀（AGENTS.md 同名节细节，主文件只留判据与指针）": [
+      "R21"
+    ],
+    "上下文经济与注意力保护": [
+      "R03",
+      "R17"
+    ],
+    "硬事实登记簿（`/fact`）": [
+      "R11",
+      "R17"
+    ],
+    "大输出的正确顺序": [
+      "R05",
+      "R08"
+    ],
+    "三个已核实的坑": [
+      "R10",
+      "R11"
+    ],
+    "我们做不到的（宿主级，别再找插件）": [
+      "R08",
+      "R18"
+    ],
+    "硬事实登记簿与接续证据（AGENTS.md「工具选用」原末条）": [
+      "R11",
+      "R17"
+    ],
+    "桌面自动化（CUA / computer-use：优先走驱动 + 不抢鼠标）": [
+      "R18"
+    ],
+    "数据库（PostgreSQL / 瀚高 / MySQL / Oracle / MongoDB / Redis）": [
+      "R13"
+    ],
+    "交付（提交 / PR / 发布 / 部署）": [
+      "R04",
+      "R20"
+    ],
+    "文档运行时复核（评审方案文档时读）": [
+      "R11",
+      "R19"
+    ],
+    "文档体系（repo wiki / 规格文档 / 多代理分工审阅）": [
+      "R16",
+      "R19"
+    ],
+    "外部 jar 实体扩展约束": [
+      "R07",
+      "R09",
+      "R20"
+    ],
+    "前端通用（TS / JS / HTML / SVG / 小程序·小游戏）": [
+      "R12"
+    ],
+    "精确识图主动触发规则": [
+      "R12"
+    ],
+    "触发条件（满足任一即主动加载 `image-detail-inspect`）": [
+      "R12"
+    ],
+    "动作": [
+      "R12"
+    ],
+    "配套机制": [
+      "R08",
+      "R12"
+    ],
+    "边界": [
+      "R11",
+      "R12"
+    ],
+    "中间件（nginx / Nacos / 消息队列）": [
+      "R07",
+      "R09",
+      "R13"
+    ],
+    "Java / Spring Boot": [
+      "R07",
+      "R09",
+      "R13"
+    ],
+    "长任务与上下文纪律": [
+      "R17"
+    ],
+    "分级澄清与提示词优化": [
+      "R01",
+      "R03"
+    ],
+    "保留原意并给出推荐": [
+      "R01",
+      "R03"
+    ],
+    "提问与授权边界": [
+      "R01",
+      "R04"
+    ],
+    "行为对照案例": [
+      "R01",
+      "R03"
+    ],
+    "长任务与接续": [
+      "R17"
+    ],
+    "多 schema 同名表权威源识别": [
+      "R13"
+    ],
+    "Python": [
+      "R07",
+      "R09",
+      "R11"
+    ],
+    "React": [
+      "R07",
+      "R12"
+    ],
+    "规则强制层：三层机制与 hook 实现要点": [
+      "R02",
+      "R21",
+      "R22"
+    ],
+    "文本与输入的字符安全（改文件 / 传参 / 生成脚本）": [
+      "R15"
+    ],
+    "测试": [
+      "R11"
+    ],
+    "开发任务拆分（VibeCoding 格式）": [
+      "R01",
+      "R16",
+      "R17"
+    ],
+    "开发任务与交付": [
+      "R01",
+      "R20"
+    ],
+    "Vue": [
+      "R07",
+      "R12"
+    ],
+    "三、推荐技能清单（按域速查）": [
+      "R08",
+      "R21"
+    ],
+    "四、背后的设计原则": [
+      "R01",
+      "R11"
+    ]
+  },
+  "upstream_hashes": {
+    "skills/agent-client-network-triage/SKILL.md": "5735039fffea8e997459068cdb4d75db979c2a118a4ec23febbfee12bb19c6b8",
+    "skills/architecture-designer/SKILL.md": "52d992811c70048944079e39161ed22442b031b620cf8a92cc373e6e3e7b6438",
+    "skills/async-python-patterns/SKILL.md": "beeac92f802f21a968088e5d12fc587833b772ad69806eddf6812f1a2e9c7a57",
+    "skills/audit-ci-cost-levers/SKILL.md": "84ba9240e43d7e4e4e7360350153ab842a5668d4e99e74db9ba60c96d56ad194",
+    "skills/awesome-design-md/SKILL.md": "4ee427136976edd5f8f122ca64ca5110d4c8a648fe3963f9df03770e6c70decf",
+    "skills/better-typography/SKILL.md": "3a4cebc4f2f853aaf689c3a9520fcac14f435591b4502c34b0c35ba3f899c367",
+    "skills/better-ui/SKILL.md": "5d9e8d64c2c9ee386cab1f7e760de85a3884a2c2a221d6b377948e5c7537ef09",
+    "skills/byok-model-retry/SKILL.md": "af8c9a09676c9c508414d6a48e68ca0914da30c8e2aada509fe3b789bcc534d5",
+    "skills/cloudbase-wechat-integration/SKILL.md": "e33a23e4957bd39dd92002a6a840edc0a8d10de6a759bfb352570b14dc2475cc",
+    "skills/concurrent-edit-attribution-check/SKILL.md": "d0431b7b45beecad732299f0addd77525e79d6eb168c413fe43231a6858fdcca",
+    "skills/continuation-state-audit/SKILL.md": "f6392eb9c7920ce19b10b6494e52cc88c7e7ecd7caf8e3d1fa10d1fde677cdeb",
+    "skills/counterexample-driven-plan-review/SKILL.md": "e7e7c7acba05fa1907d769b01142546d0b2a8d77c4960e2a5bc3f73a963b8772",
+    "skills/deliver-prd/SKILL.md": "83e85b1883f1a09b225dae51f0cd83910f305d8c2b283ef374a0b89f95ab7a3d",
+    "skills/design-engineering-catalogue/SKILL.md": "2d9799838b3350d5a835cd2424f92b5fc4bfebedc7e8bf26d5598496168eb258",
+    "skills/design-taste-frontend/SKILL.md": "b783e52d01ccfc222e2dbb6b0698a3366da9468fbc0b7d9b989fb623bade5d4c",
+    "skills/desktop-update-push-triage/SKILL.md": "9da49a2fe895950a6c75b2b1e4c9d121bb1a7b5189f1b04d55652341c1c21a1d",
+    "skills/diagnose-github-actions-quota/SKILL.md": "74e5bd46cc540ce254ce716c6663480277f5392efdcdbaa42b8ab1f3424811e9",
+    "skills/diagnose-windows-webview2-blank-window/SKILL.md": "d03b7bffb5780d73018192b0e0f9608fe42c1774625675fd36dc88588d84c3c9",
+    "skills/disk-junction-migration/SKILL.md": "53c5f1f07ed418fcdfae4d4877f4fdebca32538b97a18a2f9b13eb12b57c6fd4",
+    "skills/distinctive-design-systems/SKILL.md": "1f17b3a81e9c11f6e5996c4eb9d841ba107916e0146ccc43572fb365afdc65d3",
+    "skills/dsh-session-format-debug/SKILL.md": "03b7fdc53ee09d26bf00485d4ee2c1b9121fd7233f86fa8ce70855d9c724cdb7",
+    "skills/electron-app-stuck-spinner-triage/SKILL.md": "922941f65203df13ca3a131364425920001c29196b09d75c334ff71d9be4f398",
+    "skills/electron-asar-code-forensics/SKILL.md": "430d78344dcf21f4a76e56ec5f66e3df4cbdad1df31757d76ea1b3ed710f2446",
+    "skills/electron-tray-icon-diagnosis/SKILL.md": "6c3813dedead1270e8599c456b7eddabd8ee037bd73d12f5405d5b30138b274b",
+    "skills/encrypted-office-visual-inspection/SKILL.md": "9c73d12d17033d65c0b33748579a0066e9e15c70d66b8b2112611d793d0cf7c1",
+    "skills/frontend-design-ui-ux/SKILL.md": "0dd55e5d6eb524e50304bd86014f7ed196c99e8e8ce24c03d14d955c7b28932a",
+    "skills/frontend-development/SKILL.md": "941b2afbff05fcc74e3744b83c59cb2d38fdacafec3d072a8ad6509922e70aa1",
+    "skills/game-designer-toolkit/SKILL.md": "abfce19e2a95e4bf0dd5637294c572fc2267e3e9b62ba595c212debaaf21bead",
+    "skills/game-numeric-design/SKILL.md": "df8a6f496b3bb0ddb7c94ebd40e49346ff8726e171266d123dd655f6a42e33b3",
+    "skills/github-accelerator/SKILL.md": "70e2eedd8d97426ff38dc18295e7ea938c47e293e998dfbacea32c4ffe0dfe48",
+    "skills/global-config-smoke-runner/SKILL.md": "3b65796ab0833edb5f9899f61f9ae94e6acdd85c14727e193f50752cdb354417",
+    "skills/goal-driven-execution/SKILL.md": "ea8b08c3bb29db834ed9d01c1459b6b634407aa0fc76a0dc98824b5934f6923b",
+    "skills/hid-device-protocol-probe/SKILL.md": "1c7365899ffc889760f04d521b8bddd18a0d9a69614e0e24f3747f63ee3a10b8",
+    "skills/i-have-adhd/SKILL.md": "b9826483a2f6f6b3292d62494bf31bfdf92c6487e6553577a7fa3cf77a2d4bcb",
+    "skills/image-detail-inspect/SKILL.md": "c558bbae92e6746345343c423df45d53f41fbbf87ddf4d8c40df76b0af30aeb9",
+    "skills/impeccable/SKILL.md": "0ae9743dcb7dfe899f8ffff7b8bfc976ecfd57200b5bf9c800a2665f857a3052",
+    "skills/injected-context-slimming/SKILL.md": "d09d1cda04b04c9c4a8e00d1e265ed0061681a935f9db8a612d2875b7e5e6d43",
+    "skills/intermittent-test-red-triage/SKILL.md": "efaf5cf751e53c959292a96ab33022c2c6c0f457fb051c43950de4d3f32d84fc",
+    "skills/java-architect/SKILL.md": "fd29cda991f70bfdbd40791a64e50016c65a2fe8f3778352ee2794ca49ef2e61",
+    "skills/java-quality/SKILL.md": "207f7bc709e41fdda0a2fda7df7a08b425f94c52f02b5eb636594eaec730e5d8",
+    "skills/kafka-best-practices/SKILL.md": "6966eb58639f0fe2331b825c15850e3f19e19fb0b703c5127826f8c1e34b3783",
+    "skills/large-sqlite-text-extraction/SKILL.md": "d64d67771e27ec528cb9052b36f1d18760aa79f437b2af8ed2de6f3bba6cfab2",
+    "skills/local-api-contracts/SKILL.md": "b634b64aa1fb743a3cb4427e1491296a88fb02063e6d7fb4dc61c6c921e9a456",
+    "skills/local-browser-e2e/SKILL.md": "2b57d4427f1c515f10609a345c7ac1a6fc0b672964129baa4142063a84294a8b",
+    "skills/local-db-migrations/SKILL.md": "23832f3a07cf2da302ce49d87c218c07eb967960879b102f591f607451171655",
+    "skills/local-frontend-a11y/SKILL.md": "a3e3d59e7e94de3f196a713c4e5e8337a82ca0fcc59a0da6c39568067c6c5f79",
+    "skills/local-performance-evidence/SKILL.md": "719945e23e7be7db9664a4471bb4d987db0fd3a2b0d7c68c9480ca97efd8429d",
+    "skills/local-reverse-proxy-triage/SKILL.md": "9cf19c0fc772dd7af37f300b92a0f6c60f11a5845ca2f22885ed5baf0922d0ea",
+    "skills/local-rust-engineering/SKILL.md": "6b15c7147a46611d1af292f9151a7ff14b915abbb4fdafa931f593af6637f54a",
+    "skills/local-spring-mybatis/SKILL.md": "9965d105b858b3c109131cbc995c9453bd690691e34579a1a7f26f672b899cd9",
+    "skills/long-task-merge-takeover/SKILL.md": "d72d16e7e93d3ccb20ae9d0d99c7834f56366dff4537aed586073fdcd8da038e",
+    "skills/mechanize-rule-into-hook-guard/SKILL.md": "d493f02a251e24b200d5b5bb1e2c657831a4e6b39aee3397fcc328c0b4f47ba9",
+    "skills/memory-bank-divergence-repair/SKILL.md": "693a115f66ef4a94dc00f270ec454daece9d2c824036804a22bb5ff2df812016",
+    "skills/memory-entry-update/SKILL.md": "62ff979dad4644f16c6223121cef1b8025d7f0f74da1885491acbbb118310290",
+    "skills/merge-inbound-qoder-package/SKILL.md": "d56c7af9f6df341b4df50c278f9e84a74340d5af487ea847d6361ff4d4fa6a75",
+    "skills/minigame-dev-pro/SKILL.md": "5ea250482f4128c4ced171d0b0a370a1437780b75996a69ba381960f8c592032",
+    "skills/miniprogram-development/SKILL.md": "9c3211a4e88ff93d45628d97157a26e7e61a4f212bac4905453bbecaadb4a65b",
+    "skills/mongodb-atlas-stream-processing/SKILL.md": "dbadc1afe80726c3090d2933322fcf8e8f79df98526b43147d65c5b5b12dbeda",
+    "skills/mongodb-connection/SKILL.md": "659eabd402dfe04b9003ea91a85b599341930594da1a1c42f489a3ce7967a6f5",
+    "skills/mongodb-mcp-setup/SKILL.md": "d48051c35fcbee67309d968e7d8c46d635187a416d2f4c64021ced94be567ec9",
+    "skills/mongodb-natural-language-querying/SKILL.md": "810010f23a1b4a2d8ccd38e89c65e44b3aa8e73d51100f058d5edf733143d9f8",
+    "skills/mongodb-query-optimizer/SKILL.md": "9fa893fbce2c5fb5eb4f698360c829382dc706f848c2af4bb159eba3743f737c",
+    "skills/mongodb-schema-design/SKILL.md": "9a1bc984d286c5659a26257477a4a93712e6c244ef9b62e504b059952ef3a8cb",
+    "skills/mongodb-search-and-ai/SKILL.md": "aadbf1268b72cdd639ed2a7009b717ce5e084f8e83c58a2c86aba7c4bffab9c7",
+    "skills/mysql/SKILL.md": "e4ea38add289809904805cc9e078a9b84a8fd8184da277466717aee8c51dc110",
+    "skills/nextjs-app-router-patterns/SKILL.md": "d6ccc7b8a1254622fa8f3814b118d3381c7f130313098bd87f217e421ac0f3a4",
+    "skills/nginx-config-builder/SKILL.md": "63911cfa78cbef76bfe88a9beb05e68ee390ea915308df9a47271678b7cfdc19",
+    "skills/nodejs-backend-patterns/SKILL.md": "9ba105d0aa7aa01bd9dde547f7c12dd1c0bd2fc4414cc2719ab9ca53b783ac7c",
+    "skills/oauth-login-failure-triage/SKILL.md": "97837177a104afc6413b316bb842b631f4da482c9dd6003e03ca421b2960cecd",
+    "skills/office-docs/SKILL.md": "d3f6784ccc65101eff97129ba0aab5d90efaa4b566ff7bc393b8b452781527c3",
+    "skills/open-code-review-delegate/SKILL.md": "801fb974a38a21b61e20665dcd1d0e7b32050a83a05e788888c1eadefed756a9",
+    "skills/oracledb/SKILL.md": "3024e2bfdea99257ad1212b580332444e4542051aa5bd21e0764403f42838988",
+    "skills/parallel-orchestration/SKILL.md": "98c34ca39f5c16da0073b677bb309e7bcf4e19cb6a3b8bf2b19eb33706b91539",
+    "skills/pause-writer-before-shared-file-edit/SKILL.md": "ab3d609a6c61b38286792c900902332d399a224cc2ed4478b8a850004116403e",
+    "skills/postgresql-optimization/SKILL.md": "e33a2420d403d194d1748c9a4dbabb1d0993098e0f2ac73a2a8682df1e03c482",
+    "skills/postgresql-table-design/SKILL.md": "05006a2c3f1fdc68dd308e8a7ad7daffd7e8f7b910643d241e31e4484110b107",
+    "skills/powershell-windows-display-interop/SKILL.md": "c9337312a27bbbe8407e682636acfe005d8b2e6dee19cca32a8582b562ead06b",
+    "skills/production-readiness-audit/SKILL.md": "ff28405450c6bae066301597bf8de4316bf36b02d7403b51fe9d868ae7993405",
+    "skills/proxy-rule-surgery/SKILL.md": "c394bb8570e504f90a7653397a06c1385e0c4469a449bfc9df423767b3998558",
+    "skills/python-anti-patterns/SKILL.md": "28d401d86a342cbd6543d3972558979633b9357e1127d9abcfbbe1642e642943",
+    "skills/python-backend-guidelines/SKILL.md": "3f35b74c8f396aba1fb453f79f283e72308d6f7c704c4d7380c41f13c42e5dd4",
+    "skills/python-dataviz/SKILL.md": "71650a98cdbce7f3a38833413a211ffe0fe8fde9ba1720d51aa7bafaa7bb28f1",
+    "skills/python-error-handling/SKILL.md": "796346a50615010c4fea52ecb93784ebf232c5d4c9f0691bfc668529d9592543",
+    "skills/python-performance-optimization/SKILL.md": "807aa725cc2b46b4d68a11a52e5b345be0449e80b7f4b60c32bfd2c35345afb5",
+    "skills/python-programmer/SKILL.md": "ff2623e6eee77b5bed835b25c9839123155314b9ecaf872a8c3ee387e1cead10",
+    "skills/python-project-structure/SKILL.md": "c53696fb8d9014abc280fc0e64220cae0d087766a16380e211a6745e481dae65",
+    "skills/python-testing-patterns/SKILL.md": "a1020718f31629c2a5b20731cad1804dbb81b18800495c5cebdf16e6cac9c175",
+    "skills/python-type-safety/SKILL.md": "7798dd109350b73c80bb4642f6e5a0ebaa2ae392484a213d4b44b35e9b4dad66",
+    "skills/rabbitmq-expert/SKILL.md": "86373e02d1eee28804b1a1467aeba2ec1cc4798152c7f8951cfe492c40492c70",
+    "skills/react-modernization/SKILL.md": "31366f7c83345d133d0182277f23b393ed2cdd6e7582c6bdf683bf85b4ae171e",
+    "skills/redis-clustering/SKILL.md": "5d9e4283bb8af39701f7b8ee569885a39d322bc49e93bb64d3415a7ec3da87d4",
+    "skills/redis-connections/SKILL.md": "e74fd4c4e307339ba5f53ce5f4302b30ba617f8c5543bc370103318a4b9d33ec",
+    "skills/redis-core/SKILL.md": "6f72de82fb6e859cae6d57c72e4bdc36e0143cd86399b041076166bff4c05730",
+    "skills/redis-observability/SKILL.md": "de6f0185d84e32e5657b8bdc0bcd704aca2d4dc6cb884a962fca941a36913fa2",
+    "skills/redis-search/SKILL.md": "6ecfdcaaabe504efdcaa9ea7f2afca909835724f481ca1abb8f40975831e71ae",
+    "skills/redis-security/SKILL.md": "36d37c27344b9d1e7b08b8a449b61968ee9aa46096f3436e8ff6b31a1627adf3",
+    "skills/redis-semantic-cache/SKILL.md": "e4deaae301db05c2656204be2904d0081f027fa1bd0ff0f2aeb83426321775eb",
+    "skills/responsive-craft/SKILL.md": "44c1d2ba076cca15da102f1f159c3393a537724ac538874e2fae6940c7cf347d",
+    "skills/rules-conflict-audit/SKILL.md": "497e9aecf7bb6054878da3d3386e11732a43d59a3df6d58c2495fc892b9bc0cf",
+    "skills/safe-text-editing/SKILL.md": "324b4bd581dd65363183b9aceb45761e01c1da190509aebb14a7a5847f64d42a",
+    "skills/self-evolution/SKILL.md": "e0ad61d29ff5ed2974c62ac22fbe097d09ae3bf96a3eaf6ff77e2284e303e383",
+    "skills/senior-devops/SKILL.md": "45b276a300842b9276bc58414edee892bc55d71805814c51b45c6549c239f2e9",
+    "skills/setup-windows-selfhosted-runner/SKILL.md": "f9ee80a026a5ae2aa765ef5bf3e7d59dda8ce5c25291c5a25bbe778859e70b0d",
+    "skills/share-package-release/SKILL.md": "2a1ec093d8af1aaeafcbf4c7f241a5004aa92651882e115df47bb64628f785d5",
+    "skills/ship-clean-pr/SKILL.md": "5a0733d19417cc8598c1256d0d30dd976ddf998714cc026ef32c7be9a0c48d2c",
+    "skills/shipped-app-js-patch-hygiene/SKILL.md": "37633a989426d3218f42be175fdb12cba9622de7b0a97b97cc470b0970e3eae0",
+    "skills/skill-authoring-closure/SKILL.md": "9394fc5d8eb601a69eac8a69056c783a6e3d6f8aad09f61da600546c94948b96",
+    "skills/skill-description-route-cue-rewrite/SKILL.md": "2c0741891e896538e4032081e1ec044005c0b1a79cea7b79950f386daa6472aa",
+    "skills/skill-reference-integrity-audit/SKILL.md": "b7b66ceffcfe5eca5c6c0c21d5bdcac226299694331809f78eca5b4988390157",
+    "skills/skill-tiering-lazy-load/SKILL.md": "61e867969e8047838549557a6bee22a6633e1791becc623d2df1ed648df0631a",
+    "skills/skill-trim-with-capability-transfer/SKILL.md": "900ee91f9ab58b3bd45f0baf13b444847891a92c87f2fd78b1bc6a92635db6c4",
+    "skills/skills-router/SKILL.md": "ff79fccd13649d72d13af2595a0b9d8879a402e019bd40ef005a3acba94faeb9",
+    "skills/spa-loading-hang-triage/SKILL.md": "deac3a1cfe7db4daa180f73339eac249ef07416b2646a1d0847a1db6682cee4e",
+    "skills/spring-aop/SKILL.md": "bd68fefab3844e5eaa2bf65f6abbc25e9b3d31c15ea3473325c15dda305fc30a",
+    "skills/spring-boot-actuator/SKILL.md": "cdfdf7e8083f27bc6042acf41a0e079d1ddccf20641e0ade278111a0ee544e52",
+    "skills/spring-boot-cache/SKILL.md": "b75a38095fe37613dc80e58ecddded488d149a6bc0fb9dcb3fb006088e42f6c5",
+    "skills/spring-boot-event-driven-patterns/SKILL.md": "969de078c2c03e4497a9c9b3a2b04c51300ba1275895c7e72fed630282b1b9d2",
+    "skills/spring-boot-resilience4j/SKILL.md": "43dcc6b658eb2a142596869225d23e89234ffa2e0377a03379cd39e1ffc72949",
+    "skills/spring-boot-rest-api-standards/SKILL.md": "4bd8eaeb0d0d54834148317f5d20cc75d6b989f8bfb3685ec3046a702ed11d95",
+    "skills/spring-boot-test-patterns/SKILL.md": "d9ac6d963f4b9e243428568d7a5dcaddb91416d5b42150f5e27ee0e4b55a5ac4",
+    "skills/spring-events/SKILL.md": "f2b2808a0bcf201a82aa7750c809b825a26e06430bcfdde2ca320dd96fea8d08",
+    "skills/springboot-patterns/SKILL.md": "76562aa9f6ef976c534f4f8afdb86b65f288ed4032eda4f4ee2f5548f56cf0a0",
+    "skills/springboot-verification/SKILL.md": "7aa254ba6b28d002b43b2837edcd43b0f87a19e34a861a286b60114830128631",
+    "skills/structured-edit-safety/SKILL.md": "938d798b67c1b2b13f5f475d22e2fac90b8e9054411a7b7f067642566f1b4ea1",
+    "skills/svg-scene-animation/SKILL.md": "6d39d670cdeea58a1757006c46f6847c05e3e65f713a86314bc87641e840c0ba",
+    "skills/systemd-java-service-centos7/SKILL.md": "e132dd93576b99783d20df1d6ec21b91543147a3ba48dca323770d7d1f72e074",
+    "skills/tailwindcss-animations/SKILL.md": "1487c6983d34a2c23c1d623db06a6b63d11b41d3f8a3c5032fd869ee58adc726",
+    "skills/typescript-pro/SKILL.md": "a029af9546e0a9802d56584651fd6b30820cc3fb191e8da4eddf11428c36c1b2",
+    "skills/umi3-to-umi4-upgrade/SKILL.md": "83e1ca1a275dff81f6944b5c674e6360927b23e3c3d0765416148581df209fc6",
+    "skills/user-side-deploy-verify/SKILL.md": "bc3585143cbe245dda2aecb9f0e7c0482c09ea264387aeab4e646b535d40ff5d",
+    "skills/verify-before-claim/SKILL.md": "3087b59974be3598fcc7802564086701fe9782a810ed316c2ab5b63072f87089",
+    "skills/verify-ui-in-browser/SKILL.md": "be0fb63ac2cf58e4bd1e9286a9a8795687fa02a25d0ca68df36a71ae74eddda6",
+    "skills/verify-windows-cmd-tool/SKILL.md": "ed606290243392add6e75eb9aa9ee339bef5c410d16c6218b901227e2ed27a3d",
+    "skills/vibe-coding-workflow/SKILL.md": "65f0109e04637ca2d8a87b674c511d0572b1ef55293048606e61d01f854dedd2",
+    "skills/vibecoding-batch-append/SKILL.md": "a1c473b346bb078dced8c1be73ee13d2abcf756b0a98e4a0fae8e803d202845d",
+    "skills/vibecoding-doc/SKILL.md": "34aa7efe041318d377e923c1299c14b03171ff344ee5abba3537d06099a6bf0e",
+    "skills/vue-expert/SKILL.md": "9290c717dd57e6e818d7a153930974d3704a0dc775ab90e573f20d36d7976793",
+    "skills/wechat-miniprogram-dev/SKILL.md": "ed7d9fbb01c4e5a1ecda27ed57b798beb9350177484bb1b1779ada7638fde372",
+    "skills/windows-desktop-keyboard-automation/SKILL.md": "f9de16f32305e072062344a2f5b4778f8e2ecdedfe457299b16f3e6bb9d73f3d",
+    "skills/windows-elevated-changes-from-git-bash/SKILL.md": "86f70fa9ae0125383571eb729f3444d825b49d5c8201a061b82cdf2fbb5b82c2",
+    "skills/windows-gitbash-command-safety/SKILL.md": "ea65fc562ec0476ef9ed2593f6db9ab7d34535b340be169cc8fe0b519d26e2da",
+    "skills/windows-powershell-from-gitbash/SKILL.md": "ae49e191198a1d5e58c36d8c35ea61a7f806f7138a7ee2abc76bea7c8c73e68c",
+    "skills/windows-relocated-install-path-repair/SKILL.md": "aa90ed7ca55e5ec86d2ad3fa6ffbfca639ee38d4385b4bec30831c99d8d28217",
+    "skills/windows-ui-forensics-powershell/SKILL.md": "35a3cd84a4f79ed3639142bd067ebff655cac8b2cc668c7f2f992be079a5a869",
+    "skills/write-repowiki/SKILL.md": "7c90d7079e1c4ccd1a751e5487c17e7487678a9f3d9505956bb00be3496a3e94",
+    "Qoder-AI编码通用规则.md": "dcfc7dec6bfdfbaeedabff2da1f2c09a5b61caa23380b94663e0cda024c4ad31"
+  }
+}

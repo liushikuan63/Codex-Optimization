@@ -9,3 +9,9 @@ description: 评估或移植技能集合与外部能力包，核对来源、能�
 - 路由描述用典型正例和易混反例校对；人工判断不能称为宿主触发测试。现有技能保留定制并备份，安装后同时检查所处作用域和启用路径。
 - 使用 [引用审计器](scripts/audit_references.py) 检查一个或多个技能：`python scripts/audit_references.py <技能目录>`（在本技能目录执行）。退出码 0 表示检查范围内的链接存在，1 表示缺失，2 表示读取或输入错误。工具不联网，不执行被引用的脚本，动态路径需另验。
 - 交付时保存受影响文件、来源、安装哈希和冲突回退条件。
+
+按场景查找：[任务示例 / Worked examples](references/applied-methods.md)。
+
+## English
+
+Inventory rules, skills and supporting files. Review licenses, triggers, dependencies and host support. Map reusable methods to shipped files and explain exclusions. Check references and positive and negative trigger examples. From a clean install verify actual host discovery; file presence does not establish routing.

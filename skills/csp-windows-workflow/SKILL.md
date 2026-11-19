@@ -10,3 +10,9 @@ description: 处理 Windows 项目的工具链与跨 Shell 问题、批量文本
 - 同构批量替换和固定列编辑先做 [批量改写预检](references/structured-edit-preflight.md)，核对锚点、当前快照和编码。
 - 仅聚合或并行套件偶发失败时按 [间歇失败诊断](references/intermittent-suite-failures.md) 保留首红、复制同一运行条件并逐项排查；单独执行通过只用于定位。
 - 实际报告执行、失败和跳过数量。当运行替身或只编译时保留边界。
+
+按场景查找：[任务示例 / Worked examples](references/applied-methods.md)。
+
+## English
+
+Locate the checkout, required versions and actual shell. Distinguish PowerShell, cmd, Git Bash and WSL. Preserve paths, encoding and line endings. Before bulk edits check anchor counts and existing changes. For intermittent tests keep the first failure, match the runner and vary one factor at a time.

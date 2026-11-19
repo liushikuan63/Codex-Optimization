@@ -2,7 +2,9 @@ name: Verify share pack
 on:
   push:
     branches: [main]
+    tags: ['v*']
   pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 concurrency:
@@ -21,3 +23,30 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r requirements-visual.txt
       - run: python -m unittest discover -s tests -v
+      - name: Read the reviewed upstream revision
+        id: sources
+        shell: bash
+        run: python -X utf8 -c "import json, os; print('revision=' + json.load(open('inventory.json', encoding='utf8'))['upstream']['revision'], file=open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf8'))"
+      - uses: actions/checkout@v6
+        with:
+          repository: liushikuan63/Qoder-Optimization
+          ref: ${{ steps.sources.outputs.revision }}
+          path: .reviewed-source
+          persist-credentials: false
+      - name: Check skill, rule and source coverage
+        run: python -X utf8 scripts/check_coverage.py --upstream .reviewed-source
+      - name: Read current upstream for a release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: actions/checkout@v6
+        with:
+          repository: liushikuan63/Qoder-Optimization
+          ref: main
+          path: .current-source
+          persist-credentials: false
+      - name: Reject unreviewed upstream changes or a mismatched tag
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          python -X utf8 -c "import os, pathlib, sys; sys.exit(0 if os.environ['GITHUB_REF_NAME'] == 'v' + pathlib.Path('VERSION').read_text().strip() else 'Tag differs from VERSION')"
+          python -X utf8 scripts/check_coverage.py --upstream .current-source
+      - name: Create and inspect the release ZIP
+        run: python -X utf8 scripts/build_release.py --output pack.zip

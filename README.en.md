@@ -1,47 +1,44 @@
 # Codex-Optimization
 
-[简体中文](README.md) · [Download](https://github.com/liushikuan63/Codex-Optimization/releases/latest)
+**An opt-in toolkit for working with Codex.** Project rules describe how a team works, skills guide a specific task, and optional MCP connections provide current public documentation.
 
-Codex-Optimization helps Codex review plans, check changes, and show the evidence behind its work. For example, it can help spot a migration that passes its tests while skipping an old entry point, or a page that shows a spinner even though the server returns HTTP 200.
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.12%2B-blue.svg)](docs/install.en.md)
 
-| Start here | What it does |
-| --- | --- |
-| [Skills](#skills) | Give Codex a workflow for a specific task, such as reviewing a plan or testing a page. |
-| [MCP setup](mcp/README.en.md) | Let Codex look up public documentation when it needs current API details. |
-| [Project rules](rules/README.en.md) | Tell Codex how to work in a repository through an `AGENTS.md` file. |
+English | [简体中文](README.md) · [Install guide](docs/install.en.md) · [Skill catalog](docs/skills.en.md) · [Source index](inventory.json)
 
-The three parts are independent. You can use one without installing the others.
+## Download
 
-## Install and try a skill
+No clone required. Download the ZIP and its matching `.sha256` file from the [latest release](https://github.com/liushikuan63/Codex-Optimization/releases/latest), then extract the ZIP. See [all releases](https://github.com/liushikuan63/Codex-Optimization/releases) for older versions.
 
-1. Download and extract the ZIP from [Releases](https://github.com/liushikuan63/Codex-Optimization/releases/latest). Open a terminal in the extracted folder. You need Python 3.12 or later.
-2. Replace `<project-folder>` with the repository where you want to use the skills. Run the first command to see what will happen, then run the second to install.
+| Version | Highlights | Download |
+| --- | --- | --- |
+| 0.3.0 | 32 bilingual skills, 22 project rules, and checks that compare the source inventory with the release ZIP | [ZIP](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.0/Codex-Optimization-v0.3.0.zip) · [Release notes](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.0) |
+| 0.2.0 | First bilingual guides, project rule examples and MCP examples | [Release notes](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.2.0) |
 
-   ```text
-   python scripts/manage_skills.py plan --project "<project-folder>"
-   python scripts/manage_skills.py install --project "<project-folder>"
-   ```
+## What's included
 
-3. Open a new Codex session in that project and try: **“Use $csp-plan-review to find a way this migration could pass its tests but still lose data.”**
+| Component | Count | When to use it |
+| --- | ---: | --- |
+| [Skills](docs/skills.en.md) | 32 | Choose a workflow for a task, such as reviewing a migration, diagnosing a loading page or testing a release |
+| [Project rules](rules/README.en.md) | 22, in both languages | Choose standing team agreements for the project's `AGENTS.md` |
+| [MCP examples](mcp/README.en.md) | 2 | Look up current OpenAI or third-party library documentation |
 
-Project installation writes to `.agents/skills` inside that project. For all projects on your account, use `--user` in place of `--project "<project-folder>"`. The installer leaves existing skills alone and does not enable MCP or install rules. To use the screenshot crop script, install Pillow in your existing Python environment with `python -m pip install -r requirements-visual.txt`.
+The three parts work independently. The installer adds skills. Each project chooses its rules, and each user configures the MCP connections they want.
 
-## Skills
+## Get started
 
-| Skill | When to use it |
-| --- | --- |
-| [Plan review](skills/csp-plan-review/SKILL.md) | Before a change: find gaps in the plan and tests that would miss them. |
-| [Browser checks](skills/csp-browser-acceptance/SKILL.md) | After a UI change, or when a page stays blank or keeps loading. |
-| [Screenshot details](skills/csp-visual-detail/SKILL.md) | Inspect small text, a one-pixel border, or a local change in an image. |
-| [Delivery checks](skills/csp-delivery-evidence/SKILL.md) | Match requirements to evidence from the version you plan to ship. |
-| [Windows workflow](skills/csp-windows-workflow/SKILL.md) | Diagnose shell, bulk text edit, or intermittent test failures. |
-| [VibeCoding batches](skills/csp-vibecoding-batch/SKILL.md) | Add work to an existing VibeCoding plan without losing links or checks. |
-| [Skill adoption](skills/csp-skill-adoption/SKILL.md) | Review a skill collection before bringing it into Codex. |
+Open a terminal in the extracted folder. Replace `<project-folder>` with an existing project directory. Preview the installation, then install:
 
-Skill instructions are currently in Chinese; Codex can report back in English.
+```text
+python scripts/manage_skills.py plan --project "<project-folder>"
+python scripts/manage_skills.py install --project "<project-folder>"
+```
 
-## Remove or update
+Open a new Codex session in that project and try: “Use $csp-plan-review to find a way this migration could pass its tests while an old client can no longer read its data.” Project skills live in `.agents/skills`.
 
-From the pack folder, run `python scripts/manage_skills.py uninstall --project "<project-folder>"` (or use the same `--user` option as before). Install the new version after removing the old one. If an installed file was edited, the command stops before removing the pack. Back up your edits before resolving the conflict. If an install was interrupted, check the skill folder for `.codex-optimization-install.json` and see [troubleshooting](docs/development.en.md#troubleshooting).
+## Requirements and limits
 
-[Development](docs/development.en.md) · [Sources](docs/provenance.en.md) · [MIT License](LICENSE). An independent project, not an official OpenAI distribution.
+The installer needs Python 3.12 or later. Only the screenshot crop tool needs Pillow. The [install guide](docs/install.en.md) covers account-wide installation, upgrades, conflicts and removal. See [sources and scope](docs/provenance.en.md) for what was adapted from Qoder and what still needs the original tool.
+
+[Development and testing](docs/development.en.md) · [Changelog](CHANGELOG.md) · [MIT License](LICENSE). This is an independent project, not an official OpenAI distribution.

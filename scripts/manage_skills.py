@@ -1,19 +1,31 @@
-"""Install the seven Codex-Optimization skills without overwriting existing skills."""
+"""Install the skills declared by the share pack without overwriting existing skills."""
 
 import argparse
 import hashlib
 import json
 from pathlib import Path
+import re
 import sys
 
 
 REPO = Path(__file__).resolve().parents[1]
-NAMES = (
+LEGACY_NAMES = (
     "csp-browser-acceptance", "csp-delivery-evidence", "csp-plan-review",
     "csp-skill-adoption", "csp-vibecoding-batch", "csp-visual-detail",
     "csp-windows-workflow",
 )
 RECEIPT = ".codex-optimization-install.json"
+
+
+def skill_names():
+    catalog = json.loads((REPO / "inventory.json").read_text("utf8"))
+    names = tuple(catalog["skills"])
+    if not names or any(not re.fullmatch(r"csp-[a-z0-9]+(?:-[a-z0-9]+)*", n) for n in names):
+        raise ValueError("Invalid skill name in inventory")
+    folders = {p.name for p in (REPO / "skills").iterdir() if p.is_dir()}
+    if set(names) != folders:
+        raise ValueError("Skill directories differ from the published inventory")
+    return names
 
 
 def digest(data):
@@ -53,8 +65,8 @@ def manifest(payload):
             for name, files in payload.items()}
 
 
-def current(root):
-    return manifest({name: scan(root / name) for name in NAMES})
+def current(root, names):
+    return manifest({name: scan(root / name) for name in names})
 
 
 def parent_dirs(root, names):
@@ -86,29 +98,39 @@ def run(action, root):
             raise ValueError(f"No install receipt: {marker}")
         before = marker.read_bytes()
         entry = json.loads(before)
-        found = current(root)
+        if not isinstance(entry, dict) or not isinstance(entry.get("files"), dict):
+            raise ValueError("Invalid receipt")
+        names = skill_names()
+        if entry.get("schema") == 1 and entry.get("version") in ("0.1.0", "0.2.0", "v0.1.0", "v0.2.0"):
+            names = LEGACY_NAMES
+        elif entry.get("schema") != 2:
+            raise ValueError("Unknown receipt; use the installer supplied with that release")
+        if set(entry["files"]) != set(names):
+            raise ValueError("Unexpected receipt membership; no files removed")
+        found = current(root, names)
         # The on-disk inventory supplies relative paths; receipt text never supplies paths to delete.
-        if entry.get("schema") != 1 or entry.get("files") != found:
+        if entry["files"] != found:
             raise ValueError("Installed files changed or receipt is invalid. No files removed.")
-        for name in NAMES:
+        for name in names:
             delete_exact(root / name, found[name])
         if marker.read_bytes() != before:
             raise ValueError("Receipt changed during uninstall")
         marker.unlink()
-        return "Uninstalled seven managed skills"
+        return f"Uninstalled {len(names)} managed skills"
 
     if present(marker):
         raise ValueError(f"Existing install receipt: {marker}. Uninstall before reinstalling.")
-    conflicts = [str(root / name) for name in NAMES if present(root / name)]
+    names = skill_names()
+    conflicts = [str(root / name) for name in names if present(root / name)]
     if conflicts:
         raise ValueError("Existing skill directories; no files written:\n" + "\n".join(conflicts))
-    payload = {name: scan(REPO / "skills" / name) for name in NAMES}
+    payload = {name: scan(REPO / "skills" / name) for name in names}
     if any("SKILL.md" not in files for files in payload.values()):
         raise ValueError("Missing bundled SKILL.md")
     if action == "plan":
         return f"Ready: {len(payload)} skills to {root}; no files written"
     root.mkdir(parents=True, exist_ok=True)
-    data = {"schema": 1, "version": (REPO / "VERSION").read_text("utf8").strip(),
+    data = {"schema": 2, "version": (REPO / "VERSION").read_text("utf8").strip(),
             "files": manifest(payload)}
     created = {}
     # Exclusive receipt creation serializes repeated runs; existing skill dirs are claimed with mkdir.
@@ -124,7 +146,7 @@ def run(action, root):
                     with path.open("xb") as stream:
                         stream.write(body)
                     created[name][rel] = data["files"][name][rel]
-            if current(root) != data["files"]:
+            if current(root, names) != data["files"]:
                 raise ValueError("Files changed during install")
             record.write(json.dumps(data, indent=2) + "\n")
             record.flush()
@@ -133,7 +155,7 @@ def run(action, root):
                 delete_exact(root / name, files)
             # Preserve the receipt on error: there may be an interrupted write to inspect.
             raise
-    return f"Installed seven skills to {root}"
+    return f"Installed {len(names)} skills to {root}"
 
 
 def main():
