@@ -4,7 +4,7 @@ Choose the clauses that apply; keep repository-specific build commands and instr
 
 ## R01 · Scope
 
-State the requested outcome and how to tell it is complete. Make simple changes directly; track complex ones in the existing task record. Proceed on independent work and ask when the answer changes the result, cost or authority.
+State the requested outcome and how to tell it is complete. Make simple changes directly; track complex ones in the existing task record. Proceed on independent work and ask when the answer changes the result, cost or authority. Before finishing, check each part of the original request, deliver the work you can finish, and identify any actual blockers or unverified items.
 
 ## R02 · Instructions
 
@@ -12,7 +12,7 @@ Read the applicable repository and directory instructions. Resolve conflicting c
 
 ## R03 · Communication
 
-Use the reader's language. Lead with the result and its effect; preserve commands, identifiers and error messages. During longer tasks report findings, blockers and the next step.
+Use the reader's language. Lead with the result and its effect. Explain necessary technical terms in plain language and preserve commands, identifiers and error messages. During longer tasks report findings, blockers and the next step. Make the final answer understandable to someone who did not see the progress updates.
 
 ## R04 · Authority
 
@@ -40,7 +40,7 @@ Trace the real call path and cause before making the smallest complete fix. Foll
 
 ## R10 · Diagnosis
 
-Keep the first failure, version, environment, command and minimal input. Vary one important condition at a time and use a control to distinguish cause from coincidence. Change approach after repeated identical failures; a green retry alone is inconclusive.
+Keep the first failure, version, environment, command and minimal input. When relevant project notes exist, look for similar cases by version, error text and scenario, then recheck against current evidence. Vary one important condition at a time and use a control to distinguish cause from coincidence. Change approach after repeated identical failures; a green retry alone is inconclusive.
 
 ## R11 · Verification
 
@@ -68,7 +68,7 @@ Read independent material in parallel. For concurrent edits, isolate worktrees a
 
 ## R17 · Task handoff
 
-Record the goal, authority, commit, dirty files, running instances, verified work, first failure and next action. Recheck state and writer ownership on takeover. Preserve healthy tests and avoid replaying consequential operations.
+Record the goal, authority, commit, dirty files, running instances, verified work, first failure and next action. Recheck state and writer ownership on takeover. Preserve healthy tests and avoid replaying consequential operations. At the end, confirm ownership before stopping services or processes started for this task that are no longer needed. Explain why any still need to run.
 
 ## R18 · Desktop work
 
@@ -84,7 +84,7 @@ Inspect the final diff and contents before release. Install the actual artifact 
 
 ## R21 · Learning and skills
 
-Retain reusable lessons only as authorized. Record the source, scope and counterexamples. Load skills for relevant tasks. On updates check licensing, triggers, dependencies, discovery and rollback; replace private paths with portable instructions.
+Retain reusable lessons only as authorized. When a correction generalizes, record when it applies, what to do and a counterexample. Prefer updating an existing guide or check. Load skills for relevant tasks. On updates check licensing, triggers, dependencies, discovery and rollback; replace private paths with portable instructions.
 
 ## R22 · Release coverage
 

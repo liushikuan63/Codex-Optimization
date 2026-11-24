@@ -11,7 +11,7 @@ python -m pip install -r requirements-visual.txt
 python -m unittest discover -s tests -v
 ```
 
-测试在临时项目里运行安装、卸载和引用检查。在 Codex 里验证时，另查它是否发现了技能、是否加载了项目规则。MCP 则要实际查一次文档；出现在连接列表里只能说明已登记。
+测试在临时项目里运行安装、卸载、只读核对和引用检查。在 Codex 里验证时，另查它是否发现了技能、是否加载了项目规则。MCP 则要实际查一次文档；出现在连接列表里只能说明已登记。
 
 ## 说明怎么写
 
@@ -26,10 +26,10 @@ python -X utf8 scripts/check_coverage.py --upstream /path/to/Qoder-Optimization
 python -X utf8 scripts/build_release.py --output Codex-Optimization.zip
 ```
 
-输出文件请用新路径。脚本逐项比对 ZIP 文件的名称和内容。CI 在 Windows 和 Linux 上运行检查；发布流程还会核对上游当前分支。正式发布前，从 ZIP 安装到干净项目，确认 Codex 能发现技能、能读到所选的规则模板。
+输出文件请用新路径。脚本逐项比对 ZIP 文件的名称和内容。CI 在 Windows 和 Linux 上运行检查；发布流程还会核对上游当前分支。正式发布前，从 ZIP 安装到干净项目，执行 `verify` 核对收据和文件；另确认 Codex 能发现技能、能读到所选的规则模板。
 
 ## 问题排查
 
-如果安装前已有同名技能，换一个项目试用，或先处理原有技能。若安装被中断，查看目标 `.agents/skills` 下的收据和文件；先备份自己的内容，确认归属后再处理残留。不要把整个技能目录当成包的文件一并删除。
+如果安装前已有同名技能，换一个项目试用，或先处理原有技能。若安装被中断，用 `verify` 确认目标路径和冲突；先备份自己的内容，确认归属后再处理残留。不要把整个技能目录当成包的文件一并删除。
 
 发布前检查本次提交和 ZIP，确认没有本地账号、密钥和工作区数据。版本见 `VERSION`。

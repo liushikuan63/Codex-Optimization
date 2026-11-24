@@ -1,10 +1,11 @@
-"""Install the skills declared by the share pack without overwriting existing skills."""
+"""Install and verify the share pack's skills without overwriting existing skills."""
 
 import argparse
 import hashlib
 import json
 from pathlib import Path
 import re
+import stat
 import sys
 
 
@@ -87,6 +88,137 @@ def delete_exact(root, hashes):
             path.rmdir()
 
 
+def read_receipt(marker, names):
+    def unique_fields(pairs):
+        fields = dict(pairs)
+        if len(fields) != len(pairs):
+            raise ValueError("Duplicate fields in install receipt")
+        return fields
+
+    try:
+        entry = json.loads(marker.read_text("utf8"), object_pairs_hook=unique_fields)
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        raise ValueError("Invalid install receipt JSON") from None
+    if not isinstance(entry, dict):
+        raise ValueError("Invalid install receipt")
+    version, schema, files = entry.get("version"), entry.get("schema"), entry.get("files")
+    if not isinstance(version, str) or not re.fullmatch(r"v?[0-9]+\.[0-9]+\.[0-9]+", version):
+        raise ValueError("Invalid receipt version")
+    if type(schema) is int and schema == 1 and version.removeprefix("v") in ("0.1.0", "0.2.0"):
+        names = LEGACY_NAMES
+    elif type(schema) is not int or schema != 2:
+        raise ValueError("Unknown receipt; use the installer supplied with that release")
+    if not isinstance(files, dict) or set(files) != set(names):
+        raise ValueError("Unexpected receipt membership; use the installer supplied with that release")
+    for hashes in files.values():
+        if not isinstance(hashes, dict) or "SKILL.md" not in hashes:
+            raise ValueError("Invalid receipt file inventory")
+        for rel, want in hashes.items():
+            if (re.search(r"[\\:\x00-\x1f\x7f]", rel)
+                    or any(part in ("", ".", "..") for part in rel.split("/"))):
+                raise ValueError("Invalid receipt file path")
+            if not isinstance(want, str) or not re.fullmatch(r"[0-9a-f]{64}", want):
+                raise ValueError("Invalid receipt file digest")
+    return version, files
+
+
+def entry_stat(path):
+    try:
+        return path.lstat()
+    except FileNotFoundError:
+        return None
+
+
+def is_redirect(info):
+    return (stat.S_ISLNK(info.st_mode)
+            or getattr(info, "st_file_attributes", 0) & stat.FILE_ATTRIBUTE_REPARSE_POINT)
+
+
+def inspect_skill(folder, expected):
+    differences, seen = [], set()
+
+    def visit(path):
+        info = entry_stat(path)
+        if info is None:
+            return
+        relative = path.relative_to(folder).as_posix()
+        label = folder.name if path == folder else f"{folder.name}/{relative}"
+        # Walk physical entries only. Receipt names are never opened as paths.
+        if is_redirect(info) or (
+                not stat.S_ISDIR(info.st_mode) and
+                (path == folder or not stat.S_ISREG(info.st_mode))):
+            differences.append(("BLOCKED", label))
+        elif stat.S_ISDIR(info.st_mode):
+            for child in sorted(path.iterdir()):
+                visit(child)
+        else:
+            seen.add(relative)
+            if relative not in expected:
+                # A local extra file is a conflict; its contents are not needed.
+                differences.append(("EXTRA", label))
+            else:
+                with path.open("rb") as stream:
+                    if hashlib.file_digest(stream, "sha256").hexdigest() != expected[relative]:
+                        differences.append(("CHANGED", label))
+
+    if entry_stat(folder) is None:
+        return [("MISSING", folder.name)]
+    visit(folder)
+    if not any(kind == "BLOCKED" for kind, _ in differences):
+        differences.extend(("MISSING", f"{folder.name}/{rel}") for rel in expected.keys() - seen)
+    return differences
+
+
+def verify(root, scope):
+    version = (REPO / "VERSION").read_text("utf8").strip()
+    names = skill_names()
+    print(f"Scope: {scope}\nSkills directory: {root}\nPack version: {version}")
+    for directory in (root.parent, root):
+        info = entry_stat(directory)
+        if info is not None and (is_redirect(info) or not stat.S_ISDIR(info.st_mode)):
+            raise ValueError(f"Unsafe skills directory: {directory}")
+    marker = root / RECEIPT
+    info = entry_stat(marker)
+    if info is not None and (is_redirect(info) or not stat.S_ISREG(info.st_mode)):
+        raise ValueError(f"Invalid receipt path: {marker}")
+    if info is None:
+        installed, recorded = None, {}
+    else:
+        installed, recorded = read_receipt(marker, names)
+    print(f"Receipt version: {installed or 'none'}")
+
+    conflicts = []
+    expected_names = set(names) | set(recorded)
+    for name in sorted(expected_names):
+        if name in recorded:
+            conflicts.extend(inspect_skill(root / name, recorded[name]))
+        elif entry_stat(root / name) is not None:
+            conflicts.append(("UNMANAGED", name))
+    if installed == version:
+        bundled = current(REPO / "skills", names)
+        for name in names:
+            for rel in bundled[name].keys() | recorded[name].keys():
+                if bundled[name].get(rel) != recorded[name].get(rel):
+                    conflicts.append(("RECEIPT_MISMATCH", f"{name}/{rel}"))
+
+    for kind, path in sorted(conflicts, key=lambda item: (item[1], item[0])):
+        # Keep local names on one line even if a POSIX filename contains control characters.
+        label = path if path.isprintable() else json.dumps(path, ensure_ascii=True)
+        print(f"{kind} {label}")
+    if any(kind == "BLOCKED" for kind, _ in conflicts):
+        status, code = "BLOCKED", 1
+    elif conflicts:
+        status, code = "CONFLICT", 2
+    elif installed is None:
+        status, code = "NOT_INSTALLED", 2
+    elif installed != version:
+        status, code = "DIFFERENT_VERSION", 2
+    else:
+        status, code = "VERIFIED", 0
+    print(f"Status: {status}")
+    return code
+
+
 def run(action, root):
     safe_directory(root.parent)
     safe_directory(root)
@@ -160,17 +292,22 @@ def run(action, root):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=("plan", "install", "uninstall"))
+    parser.add_argument("action", choices=("plan", "install", "verify", "uninstall"))
     scope = parser.add_mutually_exclusive_group()
     scope.add_argument("--project", type=Path, default=Path.cwd(), help="project directory (default: cwd)")
     scope.add_argument("--user", action="store_true", help="use ~/.agents/skills")
     args = parser.parse_args()
     try:
-        project = Path.home() if args.user else args.project.resolve(strict=True)
+        project = Path.home() if args.user else args.project
+        if not args.user or args.action == "verify":
+            project = project.resolve(strict=True)
         if not project.is_dir():
             raise ValueError(f"Missing project directory: {project}")
-        print(run(args.action, project / ".agents/skills"))
-    except (OSError, ValueError, AttributeError) as error:
+        root = project / ".agents/skills"
+        if args.action == "verify":
+            sys.exit(verify(root, "user" if args.user else "project"))
+        print(run(args.action, root))
+    except (OSError, ValueError, AttributeError, KeyError, RuntimeError) as error:
         parser.exit(1, f"{error}\n")
 
 

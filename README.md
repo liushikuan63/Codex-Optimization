@@ -13,6 +13,7 @@
 
 | 版本 | 主要变化 | 下载 |
 | --- | --- | --- |
+| 0.3.1 | 只读核对技能安装位置、版本和冲突；补充双语交付与浏览器验收规则 | [发布包](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.1/Codex-Optimization-v0.3.1.zip) · [版本说明](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.1) |
 | 0.3.0 | 32 项双语技能、22 条项目规则；发布时核对来源清单和 ZIP 内容 | [发布包](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.0/Codex-Optimization-v0.3.0.zip) · [版本说明](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.0) |
 | 0.2.0 | 首次提供双语指南、项目规则示例和 MCP 示例 | [版本说明](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.2.0) |
 
@@ -28,11 +29,12 @@
 
 ## 快速开始
 
-在解压目录打开终端。把 `<项目目录>` 换成一个已经存在的项目路径，先预览，再安装：
+在解压目录打开终端。把 `<项目目录>` 换成一个已经存在的项目路径，预览、安装并核对：
 
 ```text
 python scripts/manage_skills.py plan --project "<项目目录>"
 python scripts/manage_skills.py install --project "<项目目录>"
+python scripts/manage_skills.py verify --project "<项目目录>"
 ```
 
 在目标项目里打开新的 Codex 会话，试一句：“用 $csp-plan-review 看看这个迁移方案：有没有测试通过、旧客户端却读不到数据的情况？” 技能安装在该项目的 `.agents/skills`。

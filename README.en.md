@@ -13,6 +13,7 @@ No clone required. Download the ZIP and its matching `.sha256` file from the [la
 
 | Version | Highlights | Download |
 | --- | --- | --- |
+| 0.3.1 | Read-only checks for installed skills, version and conflicts, plus bilingual delivery and browser acceptance guidance | [ZIP](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.1/Codex-Optimization-v0.3.1.zip) · [Release notes](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.1) |
 | 0.3.0 | 32 bilingual skills, 22 project rules, and checks that compare the source inventory with the release ZIP | [ZIP](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.0/Codex-Optimization-v0.3.0.zip) · [Release notes](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.0) |
 | 0.2.0 | First bilingual guides, project rule examples and MCP examples | [Release notes](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.2.0) |
 
@@ -28,11 +29,12 @@ The three parts work independently. The installer adds skills. Each project choo
 
 ## Get started
 
-Open a terminal in the extracted folder. Replace `<project-folder>` with an existing project directory. Preview the installation, then install:
+Open a terminal in the extracted folder. Replace `<project-folder>` with an existing project directory. Preview, install, then verify:
 
 ```text
 python scripts/manage_skills.py plan --project "<project-folder>"
 python scripts/manage_skills.py install --project "<project-folder>"
+python scripts/manage_skills.py verify --project "<project-folder>"
 ```
 
 Open a new Codex session in that project and try: “Use $csp-plan-review to find a way this migration could pass its tests while an old client can no longer read its data.” Project skills live in `.agents/skills`.

@@ -202,7 +202,7 @@
     "umi3-to-umi4-upgrade": "5dca92091f6747c086511235632467fc8e10a2d5",
     "user-side-deploy-verify": "d865c7e514528f50cfdf068859fb895f25c2e4ef",
     "verify-before-claim": "a32c4676cc7fa18577b0f2a53cb3f6a9c5f6a979",
-    "verify-ui-in-browser": "6ca7d45d7f5ec926e4b110df3e9b4471ca8b08f8",
+    "verify-ui-in-browser": "2b5f4439ae4077163fd8bc1d3e76cbae24f07421",
     "verify-windows-cmd-tool": "08076b7e021bff7a03caeab5d4f2a976b88ad1bc",
     "vibe-coding-workflow": "cfe4b118dcf316be1269b23ab96e9ef607e6a922",
     "vibecoding-batch-append": "7ef85e4cdedca6cf5d62c303551224b25730695d",
@@ -219,7 +219,7 @@
   },
   "upstream": {
     "repository": "https://github.com/liushikuan63/Qoder-Optimization",
-    "revision": "fe929cf1de22d4312b9526536568161d2a674439",
+    "revision": "9f39002a6e6713f1eb5c868ab61ad8608a1771a5",
     "rules_file": "Qoder-AI编码通用规则.md"
   },
   "skills": {
@@ -987,7 +987,7 @@
     }
   },
   "rule_sections": {
-    "Qoder-Optimization - 0.2.2": [
+    "Qoder-Optimization - 0.2.4": [
       "R02",
       "R22"
     ],
@@ -1026,7 +1026,8 @@
     "工程纪律": [
       "R06",
       "R07",
-      "R09"
+      "R09",
+      "R17"
     ],
     "文档（任务接续的载体）": [
       "R17",
@@ -1047,7 +1048,8 @@
     ],
     "工作方式": [
       "R01",
-      "R03"
+      "R03",
+      "R17"
     ],
     "二、领域规则": [
       "R07",
@@ -1336,7 +1338,7 @@
     "skills/umi3-to-umi4-upgrade/SKILL.md": "83e1ca1a275dff81f6944b5c674e6360927b23e3c3d0765416148581df209fc6",
     "skills/user-side-deploy-verify/SKILL.md": "bc3585143cbe245dda2aecb9f0e7c0482c09ea264387aeab4e646b535d40ff5d",
     "skills/verify-before-claim/SKILL.md": "3087b59974be3598fcc7802564086701fe9782a810ed316c2ab5b63072f87089",
-    "skills/verify-ui-in-browser/SKILL.md": "be0fb63ac2cf58e4bd1e9286a9a8795687fa02a25d0ca68df36a71ae74eddda6",
+    "skills/verify-ui-in-browser/SKILL.md": "a6c79ea1668e0c49bd02516f96cf163cded2cecdae25386a0780b1deb02c3577",
     "skills/verify-windows-cmd-tool/SKILL.md": "ed606290243392add6e75eb9aa9ee339bef5c410d16c6218b901227e2ed27a3d",
     "skills/vibe-coding-workflow/SKILL.md": "65f0109e04637ca2d8a87b674c511d0572b1ef55293048606e61d01f854dedd2",
     "skills/vibecoding-batch-append/SKILL.md": "a1c473b346bb078dced8c1be73ee13d2abcf756b0a98e4a0fae8e803d202845d",
@@ -1350,6 +1352,6 @@
     "skills/windows-relocated-install-path-repair/SKILL.md": "aa90ed7ca55e5ec86d2ad3fa6ffbfca639ee38d4385b4bec30831c99d8d28217",
     "skills/windows-ui-forensics-powershell/SKILL.md": "35a3cd84a4f79ed3639142bd067ebff655cac8b2cc668c7f2f992be079a5a869",
     "skills/write-repowiki/SKILL.md": "7c90d7079e1c4ccd1a751e5487c17e7487678a9f3d9505956bb00be3496a3e94",
-    "Qoder-AI编码通用规则.md": "dcfc7dec6bfdfbaeedabff2da1f2c09a5b61caa23380b94663e0cda024c4ad31"
+    "Qoder-AI编码通用规则.md": "4401e93735d64c5190d0e5a1de876ce244b67e2514a01b894d3d8d6097c7ae34"
   }
 }

@@ -11,7 +11,7 @@ python -m pip install -r requirements-visual.txt
 python -m unittest discover -s tests -v
 ```
 
-The tests run installs, removals, and link checks in temporary projects. Check skill discovery and project instructions separately in Codex. For MCP, make a real documentation query: appearing in the connection list only shows that the server is configured.
+The tests run installs, removals, read-only verification and link checks in temporary projects. Check skill discovery and project instructions separately in Codex. For MCP, make a real documentation query: appearing in the connection list only shows that the server is configured.
 
 ## Writing the guides
 
@@ -26,10 +26,10 @@ python -X utf8 scripts/check_coverage.py --upstream /path/to/Qoder-Optimization
 python -X utf8 scripts/build_release.py --output Codex-Optimization.zip
 ```
 
-Build into a new output path. The command checks the file list and contents inside the ZIP. CI runs the checks on Windows and Linux; the release workflow also compares the current upstream branch. Install the ZIP into a clean project and confirm Codex discovers its skills and reads each chosen rule template before publishing.
+Build into a new output path. The command checks the file list and contents inside the ZIP. CI runs the checks on Windows and Linux; the release workflow also compares the current upstream branch. Install the ZIP into a clean project and run `verify` to confirm the receipt and files. Separately confirm Codex discovers its skills and reads each chosen rule template before publishing.
 
 ## Troubleshooting
 
-If a skill with the same name is already installed, try the pack in another project or resolve the conflict first. After an interrupted install, inspect the receipt and files under the target `.agents/skills` folder. Back up your own files and confirm which files belong to the pack before removing any. Do not delete the whole skills folder.
+If a skill with the same name is already installed, try the pack in another project or resolve the conflict first. After an interrupted install, run `verify` to identify the target directory and any conflicts. Back up your own files and confirm which files belong to the pack before removing any. Do not delete the whole skills folder.
 
 Before publishing, inspect the commit and the ZIP for account data, secrets, or local workspace files. See `VERSION` for the current version.
