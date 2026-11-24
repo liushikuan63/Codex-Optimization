@@ -4,7 +4,7 @@
 
 ## Download and verify
 
-Download the ZIP and its `.sha256` file from the [same release](https://github.com/liushikuan63/Codex-Optimization/releases/latest). On Windows, run `Get-FileHash -Algorithm SHA256 -LiteralPath 'Codex-Optimization-v0.3.1.zip'` and compare the result with the checksum. On Linux, run `sha256sum -c Codex-Optimization-v0.3.1.zip.sha256` in the download directory. Substitute the filename for your version. Extract the verified archive, then open a terminal in the folder containing `VERSION` and `scripts`.
+Download the ZIP and its `.sha256` file from the [same release](https://github.com/liushikuan63/Codex-Optimization/releases/latest). On Windows, run `Get-FileHash -Algorithm SHA256 -LiteralPath 'Codex-Optimization-v0.3.2.zip'` and compare the result with the checksum. On Linux, run `sha256sum -c Codex-Optimization-v0.3.2.zip.sha256` in the download directory. Substitute the filename for your version. Extract the verified archive, then open a terminal in the folder containing `VERSION` and `scripts`.
 
 ## Choose where to install
 

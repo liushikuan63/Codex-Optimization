@@ -74,7 +74,9 @@ class PackTest(unittest.TestCase):
         before = snapshot(self.target)
         result = self.command("verify")
         self.assertIn("Scope: project", result.stdout)
-        self.assertIn(f"Skills directory: {self.target}", result.stdout)
+        # Windows may spell the temporary root as an 8.3 alias.
+        expected_root = self.project.resolve(strict=True) / ".agents/skills"
+        self.assertIn(f"Skills directory: {expected_root}", result.stdout)
         self.assertIn("Status: VERIFIED", result.stdout)
         self.assertEqual(before, snapshot(self.target))
 
@@ -124,7 +126,8 @@ class PackTest(unittest.TestCase):
                                      "USERPROFILE": str(fake_home)})
         self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
         self.assertIn("Scope: user", result.stdout)
-        self.assertIn(f"Skills directory: {fake_home / '.agents/skills'}", result.stdout)
+        expected_root = fake_home.resolve(strict=True) / ".agents/skills"
+        self.assertIn(f"Skills directory: {expected_root}", result.stdout)
         self.assertIn("Status: NOT_INSTALLED", result.stdout)
         self.assertFalse((fake_home / ".agents").exists())
 

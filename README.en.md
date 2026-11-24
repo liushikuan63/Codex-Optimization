@@ -13,7 +13,7 @@ No clone required. Download the ZIP and its matching `.sha256` file from the [la
 
 | Version | Highlights | Download |
 | --- | --- | --- |
-| 0.3.1 | Read-only checks for installed skills, version and conflicts, plus bilingual delivery and browser acceptance guidance | [ZIP](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.1/Codex-Optimization-v0.3.1.zip) · [Release notes](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.1) |
+| 0.3.2 | Read-only checks for installed skills, version and conflicts, plus bilingual delivery and browser acceptance guidance | [ZIP](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.2/Codex-Optimization-v0.3.2.zip) · [Release notes](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.2) |
 | 0.3.0 | 32 bilingual skills, 22 project rules, and checks that compare the source inventory with the release ZIP | [ZIP](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.0/Codex-Optimization-v0.3.0.zip) · [Release notes](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.0) |
 | 0.2.0 | First bilingual guides, project rule examples and MCP examples | [Release notes](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.2.0) |
 

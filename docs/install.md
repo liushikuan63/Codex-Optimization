@@ -4,7 +4,7 @@
 
 ## 下载并校验
 
-从[同一版本的发布页](https://github.com/liushikuan63/Codex-Optimization/releases/latest)下载 ZIP 和 `.sha256` 文件。Windows 可用 `Get-FileHash -Algorithm SHA256 -LiteralPath 'Codex-Optimization-v0.3.1.zip'`；Linux 可在下载目录运行 `sha256sum -c Codex-Optimization-v0.3.1.zip.sha256`。校验一致后解压，在包含 `VERSION` 和 `scripts` 的目录运行下面的命令。其他版本请替换文件名。
+从[同一版本的发布页](https://github.com/liushikuan63/Codex-Optimization/releases/latest)下载 ZIP 和 `.sha256` 文件。Windows 可用 `Get-FileHash -Algorithm SHA256 -LiteralPath 'Codex-Optimization-v0.3.2.zip'`；Linux 可在下载目录运行 `sha256sum -c Codex-Optimization-v0.3.2.zip.sha256`。校验一致后解压，在包含 `VERSION` 和 `scripts` 的目录运行下面的命令。其他版本请替换文件名。
 
 ## 选择安装位置
 

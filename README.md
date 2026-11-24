@@ -13,7 +13,7 @@
 
 | 版本 | 主要变化 | 下载 |
 | --- | --- | --- |
-| 0.3.1 | 只读核对技能安装位置、版本和冲突；补充双语交付与浏览器验收规则 | [发布包](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.1/Codex-Optimization-v0.3.1.zip) · [版本说明](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.1) |
+| 0.3.2 | 只读核对技能安装位置、版本和冲突；补充双语交付与浏览器验收规则 | [发布包](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.2/Codex-Optimization-v0.3.2.zip) · [版本说明](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.2) |
 | 0.3.0 | 32 项双语技能、22 条项目规则；发布时核对来源清单和 ZIP 内容 | [发布包](https://github.com/liushikuan63/Codex-Optimization/releases/download/v0.3.0/Codex-Optimization-v0.3.0.zip) · [版本说明](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.3.0) |
 | 0.2.0 | 首次提供双语指南、项目规则示例和 MCP 示例 | [版本说明](https://github.com/liushikuan63/Codex-Optimization/releases/tag/v0.2.0) |
 

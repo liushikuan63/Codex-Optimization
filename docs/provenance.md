@@ -8,6 +8,6 @@
 
 清单中，`adapted` 表示抽取了可复用的方法，原技能、素材和脚本并未整套移植。`upstream-only` 表示包中没有该工具或流程，两种语言都给出原因。规则对照保留通用做法；机器路径、账号设置、宿主权限和 hook 仍属于原环境。两份可选的 [MCP 接入示例](../mcp/README.md) 独立于技能安装。
 
-0.3.1 将 Qoder 的通俗交付说明、已有排障证据和布局负对照整理进双语规则与技能。安装后用收据核对文件的做法参考 [DSH-Optimization 的部署说明](https://github.com/liushikuan63/DSH-Optimization/blob/fa1a2c9246984cb226d54e9a0fde00fe140d7d03/docs/deployment.md)；核对由本包的 Python 安装器实现。
+0.3.2 将 Qoder 的通俗交付说明、已有排障证据和布局负对照整理进双语规则与技能。安装后用收据核对文件的做法参考 [DSH-Optimization 的部署说明](https://github.com/liushikuan63/DSH-Optimization/blob/fa1a2c9246984cb226d54e9a0fde00fe140d7d03/docs/deployment.md)；核对由本包的 Python 安装器实现。
 
 本工程和上述 Qoder 版本使用 [MIT 许可证](../LICENSE)。技能按 Codex 的用法编写。上游的部分工程技能还注明来自 ECC 和 Compound Engineering，两份许可分别保存在 [ECC](../notices/LICENSE-ECC.txt) 和 [Compound Engineering](../notices/LICENSE-CE.txt)。包内不再分发第三方设计素材库或上游的整套工具。
