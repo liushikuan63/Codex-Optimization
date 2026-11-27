@@ -44,3 +44,11 @@ python scripts/manage_skills.py verify --project "<项目目录>"
 安装器需要 Python 3.12 或更高版本；只有截图裁切工具依赖 Pillow。面向所有项目的安装、旧版升级、修改冲突和卸载见[安装说明](docs/install.md)。哪些做法取自 Qoder，哪些只适用于原工具，见[来源与适用范围](docs/provenance.md)。
 
 [开发与验证](docs/development.md) · [版本记录](CHANGELOG.md) · [MIT 许可证](LICENSE)。本项目独立维护，并非 OpenAI 官方发行版。
+
+## 其他独立分享包
+
+这些仓库面向不同客户端，安装方式和权限边界各自独立：
+
+- [ClaudeCode-Optimization](https://github.com/liushikuan63/ClaudeCode-Optimization) — Claude Code 按需技能、提示 hook 与可选恢复网关。
+- [Qoder-Optimization](https://github.com/liushikuan63/Qoder-Optimization) — Qoder rules、skills、hooks、commands 与 MCP 模板。
+- [DSH-Optimization](https://github.com/liushikuan63/DSH-Optimization) — portable DSH NEXT workflow、guarded repairs and layered acceptance.
